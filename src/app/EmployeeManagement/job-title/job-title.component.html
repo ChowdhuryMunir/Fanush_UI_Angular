@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Job Titles</h2>
+  <form [formGroup]="jobTitleForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label for="jobTitleName">Job Title Name:</label>
+      <input type="text" id="jobTitleName" formControlName="jobTitleName" class="form-control">
+      <div *ngIf="jobTitleForm.get('jobTitleName').invalid && jobTitleForm.get('jobTitleName').touched" class="text-danger">
+        Job Title Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="isActive">Is Active:</label>
+      <input type="checkbox" id="isActive" formControlName="isActive">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+  </form>
+
+  <hr>
+
+  <h3>All Job Titles</h3>
+  <ul class="list-group">
+    <li *ngFor="let jobTitle of allJobTitles | async" class="list-group-item">
+      {{ jobTitle.jobTitleName }} ({{ jobTitle.isActive ? 'Active' : 'Inactive' }})
+      <button class="btn btn-info btn-sm float-right" (click)="loadJobTitleToEdit(jobTitle.jobTitleId)">Edit</button>
+      <button class="btn btn-danger btn-sm float-right mr-2" (click)="deleteJobTitle(jobTitle.jobTitleId)">Delete</button>
+    </li>
+  </ul>
+
+  <div *ngIf="dataSaved" class="alert alert-success mt-3">
+    {{ message }}
+  </div>
+</div>

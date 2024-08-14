@@ -11,6 +11,9 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/departments">Departments</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/jobTitle">JobTitle</a>
+      </li>
     </ul>
     <!-- Dropdown for departments (optional) -->
     <ul class="navbar-nav">
@@ -22,6 +25,7 @@
           <a *ngFor="let department of departments" class="dropdown-item" href="#">
             {{ department.departmentName }}
           </a>
+          
         </div>
       </li>
     </ul>

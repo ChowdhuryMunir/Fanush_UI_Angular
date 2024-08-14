@@ -49,14 +49,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { DepartmentComponent } from './EmployeeManagement/department/department.component';
 import { DepartmentServices } from './EmployeeManagement/department/department.service';
 import { NavigationComponent } from './navigation/navigation.component';
-import { HomeComponent } from './home/home.component'; // Ensure HomeComponent is imported
+import { HomeComponent } from './home/home.component';
+import { EmployeeComponent } from './EmployeeManagement/employee/employee.component';
+import { EmployeeLifecycleComponent } from './EmployeeManagement/employee-lifecycle/employee-lifecycle.component';
+import { JobTitleComponent } from './EmployeeManagement/job-title/job-title.component';
+import { EmployeeDataImportExportComponent } from './EmployeeManagement/employee-data-import-export/employee-data-import-export.component'; // Ensure HomeComponent is imported
+import { JobTitleService } from './EmployeeManagement/job-title/job-title.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DepartmentComponent,
     NavigationComponent,
-    HomeComponent, // Add HomeComponent to declarations
+    HomeComponent,
+    EmployeeComponent,
+    EmployeeLifecycleComponent,
+    JobTitleComponent,
+    EmployeeDataImportExportComponent, // Add HomeComponent to declarations
   ],
   imports: [
     BrowserModule,
@@ -67,6 +76,7 @@ import { HomeComponent } from './home/home.component'; // Ensure HomeComponent i
   ],
   providers: [
     DepartmentServices,
+    JobTitleService,
     HttpClientModule// Add other services here if needed
   ],
   bootstrap: [AppComponent]
