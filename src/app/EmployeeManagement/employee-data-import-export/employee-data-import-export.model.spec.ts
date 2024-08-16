@@ -1,7 +1,7 @@
-import { EmployeeDataImportExportModel } from './employee-data-import-export.model';
+import { EmployeeDataImportExport } from './employee-data-import-export.model';
 
-describe('EmployeeDataImportExportModel', () => {
+describe('EmployeeDataImportExport', () => {
   it('should create an instance', () => {
-    expect(new EmployeeDataImportExportModel()).toBeTruthy();
+    expect(new EmployeeDataImportExport()).toBeTruthy();
   });
 });

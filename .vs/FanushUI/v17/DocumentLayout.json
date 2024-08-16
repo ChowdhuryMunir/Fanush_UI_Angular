@@ -1,182 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\GroupAProject\\FanushUI\\",
+  "WorkspaceRootPath": "G:\\pro pro\\FanushUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|f:\\groupaproject\\fanushui\\src\\app\\employeemanagement\\job-title\\job-title.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\job-title\\job-title.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|G:\\pro pro\\FanushUI\\src\\app\\employeemanagement\\employee\\employee.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|solutionrelative:src\\app\\employeemanagement\\employee\\employee.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\job-title\\job-title.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\job-title\\job-title.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|g:\\pro pro\\fanushui\\src\\app\\employeemanagement\\employee-lifecycle\\employee-lifecycle.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|solutionrelative:src\\app\\employeemanagement\\employee-lifecycle\\employee-lifecycle.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\job-title\\job-title.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\job-title\\job-title.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|g:\\pro pro\\fanushui\\src\\app\\employeemanagement\\employee-lifecycle\\employee-lifecycle.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|solutionrelative:src\\app\\employeemanagement\\employee-lifecycle\\employee-lifecycle.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\home\\home.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\home\\home.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\app.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\environments\\environment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\environments\\environment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\environments\\environment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\environments\\environment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\environments\\environment.development.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\environments\\environment.development.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\job-title\\job-title.model.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\job-title\\job-title.model.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\job-title\\job-title.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|F:\\GroupAProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\job-title\\job-title.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\employeemanagement\\department\\department.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\employeemanagement\\department\\department.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:src\\app\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|F:\\GroupAProject\\FanushUI\\angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\Chowdhury\\C_Sharp\\FinalProject\\FanushUI|solutionrelative:angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|g:\\pro pro\\fanushui\\src\\app\\employeemanagement\\employee-lifecycle\\employee-lifecycle.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|G:\\pro pro\\FanushUI|solutionrelative:src\\app\\employeemanagement\\employee-lifecycle\\employee-lifecycle.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -186,540 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "home.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.html",
-              "RelativeDocumentMoniker": "src\\app\\home\\home.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.html",
-              "RelativeToolTip": "src\\app\\home\\home.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Title": "employee-lifecycle.component.html",
+              "DocumentMoniker": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.html",
+              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.html",
+              "ToolTip": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.html",
+              "RelativeToolTip": "src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-14T06:41:42.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "home.component.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\home\\home.component.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.spec.ts",
-              "RelativeToolTip": "src\\app\\home\\home.component.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T06:41:39.636Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "home.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\home\\home.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.ts",
-              "RelativeToolTip": "src\\app\\home\\home.component.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T06:41:36.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "job-title.service.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.service.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\job-title\\job-title.service.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.service.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\job-title\\job-title.service.ts",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T05:10:54.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "job-title.model.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.model.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\job-title\\job-title.model.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.model.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\job-title\\job-title.model.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T05:15:31.036Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "job-title.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\job-title\\job-title.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.component.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\job-title\\job-title.component.ts",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAgwFgAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T05:20:29.158Z",
+              "WhenOpened": "2024-08-16T09:36:32.367Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "navigation.component.css",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.css",
-              "RelativeDocumentMoniker": "src\\app\\navigation\\navigation.component.css",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.css",
-              "RelativeToolTip": "src\\app\\navigation\\navigation.component.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-14T06:20:35.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "navigation.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.html",
-              "RelativeDocumentMoniker": "src\\app\\navigation\\navigation.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.html",
-              "RelativeToolTip": "src\\app\\navigation\\navigation.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-13T05:18:39.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "home.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.html",
-              "RelativeDocumentMoniker": "src\\app\\home\\home.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.html",
-              "RelativeToolTip": "src\\app\\home\\home.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-13T06:14:11.079Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "navigation.component.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\navigation\\navigation.component.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.spec.ts",
-              "RelativeToolTip": "src\\app\\navigation\\navigation.component.spec.ts",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "employee-lifecycle.component.ts",
+              "DocumentMoniker": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.ts",
+              "ToolTip": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.ts",
+              "RelativeToolTip": "src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.component.ts",
+              "ViewState": "AQIAAJUAAAAAAAAAAADwv6AAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T03:50:29.59Z"
+              "WhenOpened": "2024-08-16T09:29:43.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "home.component.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\home\\home.component.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.spec.ts",
-              "RelativeToolTip": "src\\app\\home\\home.component.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "employee-lifecycle.service.ts",
+              "DocumentMoniker": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.service.ts",
+              "ToolTip": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.service.ts",
+              "RelativeToolTip": "src\\app\\EmployeeManagement\\employee-lifecycle\\employee-lifecycle.service.ts",
+              "ViewState": "AQIAABMAAAAAAAAAAAAmwB0AAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-13T06:33:08.92Z"
+              "WhenOpened": "2024-08-16T09:28:20.015Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "navigation.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\navigation\\navigation.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.ts",
-              "RelativeToolTip": "src\\app\\navigation\\navigation.component.ts",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAADAAAA",
+              "DocumentIndex": 0,
+              "Title": "employee.component.ts",
+              "DocumentMoniker": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee\\employee.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\employee\\employee.component.ts",
+              "ToolTip": "G:\\pro pro\\FanushUI\\src\\app\\EmployeeManagement\\employee\\employee.component.ts",
+              "RelativeToolTip": "src\\app\\EmployeeManagement\\employee\\employee.component.ts",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAmwIUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T03:50:38.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "home.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\home\\home.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.ts",
-              "RelativeToolTip": "src\\app\\home\\home.component.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-13T06:13:46.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "app.component.css",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.css",
-              "RelativeDocumentMoniker": "src\\app\\app.component.css",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.css",
-              "RelativeToolTip": "src\\app\\app.component.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-14T04:58:37.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "app.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.html",
-              "RelativeDocumentMoniker": "src\\app\\app.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.html",
-              "RelativeToolTip": "src\\app\\app.component.html",
-              "ViewState": "AQIAANkBAAAAAAAAAAAIwOYBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-14T03:50:16.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "app.component.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.component.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.spec.ts",
-              "RelativeToolTip": "src\\app\\app.component.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T04:58:34.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "app.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.ts",
-              "RelativeToolTip": "src\\app\\app.component.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T04:58:33.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "app.module.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.module.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.module.ts",
-              "RelativeToolTip": "src\\app\\app.module.ts",
-              "ViewState": "AQIAADsAAAAAAAAAAAAkwFAAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T04:58:00.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "environment.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\environments\\environment.ts",
-              "RelativeDocumentMoniker": "src\\environments\\environment.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\environments\\environment.ts",
-              "RelativeToolTip": "src\\environments\\environment.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T06:38:11.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "environment.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\environments\\environment.ts",
-              "RelativeDocumentMoniker": "src\\environments\\environment.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\environments\\environment.ts",
-              "RelativeToolTip": "src\\environments\\environment.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-11T07:30:09.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "index.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\index.html",
-              "RelativeDocumentMoniker": "src\\index.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\index.html",
-              "RelativeToolTip": "src\\index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-14T06:30:20.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "department.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.html",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.html",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-14T06:29:37.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "environment.development.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\environments\\environment.development.ts",
-              "RelativeDocumentMoniker": "src\\environments\\environment.development.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\environments\\environment.development.ts",
-              "RelativeToolTip": "src\\environments\\environment.development.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-11T07:28:35.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "department.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAgwAsAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T05:18:53.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "department.model.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T04:36:52.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "index.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\index.html",
-              "RelativeDocumentMoniker": "src\\index.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\index.html",
-              "RelativeToolTip": "src\\index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-13T05:32:30.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "department.service.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T06:29:04.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "department.service.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T05:11:05.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "department.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.html",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.html",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.component.html",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAIwEcAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-12T03:56:34.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "department.service.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.service.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-12T04:10:12.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "navigation.component.css",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.css",
-              "RelativeDocumentMoniker": "src\\app\\navigation\\navigation.component.css",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.css",
-              "RelativeToolTip": "src\\app\\navigation\\navigation.component.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-13T06:32:46.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "job-title.model.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.model.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\job-title\\job-title.model.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.model.spec.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\job-title\\job-title.model.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-14T05:30:29.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "job-title.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.component.html",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\job-title\\job-title.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\job-title\\job-title.component.html",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\job-title\\job-title.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-14T05:23:37.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "department.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.component.ts",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAAAGUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-12T03:37:46.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "app.module.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.module.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.module.ts",
-              "RelativeToolTip": "src\\app\\app.module.ts",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAADoAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-11T07:30:21.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "department.service.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.service.ts",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAqwCgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-12T03:29:37.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "app.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.ts",
-              "RelativeToolTip": "src\\app\\app.component.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-13T05:31:23.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "department.model.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "RelativeDocumentMoniker": "src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "RelativeToolTip": "src\\app\\EmployeeManagement\\department\\department.model.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-12T03:23:44.353Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "app.component.html",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.html",
-              "RelativeDocumentMoniker": "src\\app\\app.component.html",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app.component.html",
-              "RelativeToolTip": "src\\app\\app.component.html",
-              "ViewState": "AQIAAMoBAAAAAAAAAAAIwNsBAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-06-11T07:33:46.636Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "navigation.component.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\navigation\\navigation.component.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.ts",
-              "RelativeToolTip": "src\\app\\navigation\\navigation.component.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-13T04:38:52.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "navigation.component.spec.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\navigation\\navigation.component.spec.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\navigation\\navigation.component.spec.ts",
-              "RelativeToolTip": "src\\app\\navigation\\navigation.component.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-13T06:32:52.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "app-routing.module.ts",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\app-routing.module.ts",
-              "RelativeDocumentMoniker": "src\\app\\app-routing.module.ts",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\app-routing.module.ts",
-              "RelativeToolTip": "src\\app\\app-routing.module.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-06-13T05:31:34.582Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "home.component.css",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.css",
-              "RelativeDocumentMoniker": "src\\app\\home\\home.component.css",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\src\\app\\home\\home.component.css",
-              "RelativeToolTip": "src\\app\\home\\home.component.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-13T06:14:17.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "angular.json",
-              "DocumentMoniker": "F:\\GroupAProject\\FanushUI\\angular.json",
-              "RelativeDocumentMoniker": "angular.json",
-              "ToolTip": "F:\\GroupAProject\\FanushUI\\angular.json",
-              "RelativeToolTip": "angular.json",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAB4AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-13T06:22:30.812Z"
+              "WhenOpened": "2024-08-15T17:16:50.846Z",
+              "EditorCaption": ""
             }
           ]
         }

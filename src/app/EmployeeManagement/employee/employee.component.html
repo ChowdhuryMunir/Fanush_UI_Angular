@@ -1,1 +1,207 @@
-<p>employee works!</p>
+
+<div class="container">
+  <h2>{{ isEditMode ? 'Edit Employee' : 'Add Employee' }}</h2>
+
+  <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" formControlName="firstName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" formControlName="lastName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input id="dateOfBirth" type="date" formControlName="dateOfBirth" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select id="gender" formControlName="gender" class="form-control">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="presentAddress">Present Address:</label>
+      <input id="presentAddress" formControlName="presentAddress" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="permanentAddress">Permanent Address:</label>
+      <input id="permanentAddress" formControlName="permanentAddress" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input id="phoneNumber" formControlName="phoneNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="nationalId">National ID:</label>
+      <input id="nationalId" formControlName="nationalId" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="passportNumber">Passport Number:</label>
+      <input id="passportNumber" formControlName="passportNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfJoining">Date of Joining:</label>
+      <input id="dateOfJoining" type="date" formControlName="dateOfJoining" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="jobTitleId">Job Title:</label>
+      <select id="jobTitleId" formControlName="jobTitleId" class="form-control">
+        <option *ngFor="let jobTitle of allJobTitles" [value]="jobTitle.jobTitleId">
+          {{ jobTitle.jobTitleName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="departmentId">Department:</label>
+      <select id="departmentId" formControlName="departmentId" class="form-control">
+        <option *ngFor="let department of allDepartments" [value]="department.departmentId">
+          {{ department.departmentName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="emergencyContactNumber">Emergency Contact Number:</label>
+      <input id="emergencyContactNumber" formControlName="emergencyContactNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="fathersName">Father's Name:</label>
+      <input id="fathersName" formControlName="fathersName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="mothersName">Mother's Name:</label>
+      <input id="mothersName" formControlName="mothersName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="bloodGroup">Blood Group:</label>
+      <input id="bloodGroup" formControlName="bloodGroup" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="religion">Religion:</label>
+      <input id="religion" formControlName="religion" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="maritalStatus">Marital Status:</label>
+      <input id="maritalStatus" formControlName="maritalStatus" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="nationality">Nationality:</label>
+      <input id="nationality" formControlName="nationality" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="profileImagePath">Profile Image Path:</label>
+      <input id="profileImagePath" formControlName="profileImagePath" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="extraActivities">Extra Activities:</label>
+      <input id="extraActivities" formControlName="extraActivities" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="isActive">Active:</label>
+      <input id="isActive" type="checkbox" formControlName="isActive" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{ isEditMode ? 'Update Employee' : 'Add Employee' }}</button>
+    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+  </form>
+
+  <div *ngIf="message">
+    <p>{{ message }}</p>
+  </div>
+
+  <div class="mt-4">
+    <table class="table mt-4">
+      <thead>
+        <tr class="table-primary">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Date of Birth</th>
+          <th>Gender</th>
+          <th>Present Address</th>
+          <th>Permanent Address</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>National ID</th>
+          <th>Passport Number</th>
+          <th>Date of Joining</th>
+          <th>Job Title ID</th>
+          <th>Department ID</th>
+          <th>Emergency Contact Number</th>
+          <th>Father's Name</th>
+          <th>Mother's Name</th>
+          <th>Blood Group</th>
+          <th>Religion</th>
+          <th>Marital Status</th>
+          <th>Nationality</th>
+          <th>Profile Image Path</th>
+          <th>Is Active?</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of allEmployees | async">
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.dateOfBirth | date:'yyyy-MM-dd' }}</td>
+          <td>{{ employee.gender }}</td>
+          <td>{{ employee.presentAddress }}</td>
+          <td>{{ employee.permanentAddress }}</td>
+          <td>{{ employee.phoneNumber }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.nationalId }}</td>
+          <td>{{ employee.passportNumber }}</td>
+          <td>{{ employee.dateOfJoining | date:'yyyy-MM-dd' }}</td>
+          <td>{{ employee.jobTitleId }}</td>
+          <td>{{ employee.departmentId }}</td>
+          <td>{{ employee.emergencyContactNumber }}</td>
+          <td>{{ employee.fathersName }}</td>
+          <td>{{ employee.mothersName }}</td>
+          <td>{{ employee.bloodGroup }}</td>
+          <td>{{ employee.religion }}</td>
+          <td>{{ employee.maritalStatus }}</td>
+          <td>{{ employee.nationality }}</td>
+          <td>{{ employee.profileImagePath }}</td>
+          <td>{{ employee.isActive ? 'Yes' : 'No' }}</td>
+          <td>
+            <button type="button" class="btn btn-info" (click)="loadEmployeeToEdit(employee.employeeId)">Edit</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="deleteEmployeeById(employee.employeeId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>
+</div>
+

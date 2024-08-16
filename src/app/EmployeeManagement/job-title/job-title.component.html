@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
   <h2>Job Titles</h2>
   <form [formGroup]="jobTitleForm" (ngSubmit)="onFormSubmit()">
     <div class="form-group">
@@ -32,4 +32,57 @@
   <div *ngIf="dataSaved" class="alert alert-success mt-3">
     {{ message }}
   </div>
+</div>-->
+
+
+<div class="container">
+  <h2>Job Title Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Job Title Form -->
+  <form [formGroup]="jobTitleForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label for="jobTitleName">Job Title Name</label>
+      <input type="text" id="jobTitleName" class="form-control" formControlName="jobTitleName" />
+      <div *ngIf="jobTitleForm.get('jobTitleName').invalid && jobTitleForm.get('jobTitleName').touched" class="text-danger">
+        Job Title Name is required.
+      </div>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+      <label for="isActive" class="form-check-label">Is Active</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      {{ jobTitleIdUpdate == null ? 'Save' : 'Update' }}
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+  </form>
+
+  <!-- Job Titles List -->
+  <h3 class="mt-4">Job Titles List</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Job Title Name</th>
+        <th>Is Active</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let jobTitle of allJobTitles | async">
+        <td>{{ jobTitle.jobTitleName }}</td>
+        <td>{{ jobTitle.isActive ? 'Yes' : 'No' }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="loadJobTitleToEdit(jobTitle.jobTitleId)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteJobTitle(jobTitle.jobTitleId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

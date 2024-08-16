@@ -1,7 +1,7 @@
-import { EmployeeLifecycleModel } from './employee-lifecycle.model';
+import { EmployeeLifecycle } from './employee-lifecycle.model';
 
 describe('EmployeeLifecycleModel', () => {
   it('should create an instance', () => {
-    expect(new EmployeeLifecycleModel()).toBeTruthy();
+    expect(new EmployeeLifecycle()).toBeTruthy();
   });
 });
