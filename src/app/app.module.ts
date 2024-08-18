@@ -37,15 +37,10 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-// Import Bootstrap CSS
-//import 'bootstrap/dist/css/bootstrap.min.css';
-
-// Import components
+import { AppComponent } from './app.component';
 import { DepartmentComponent } from './EmployeeManagement/department/department.component';
 import { DepartmentServices } from './EmployeeManagement/department/department.service';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -53,8 +48,17 @@ import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './EmployeeManagement/employee/employee.component';
 import { EmployeeLifecycleComponent } from './EmployeeManagement/employee-lifecycle/employee-lifecycle.component';
 import { JobTitleComponent } from './EmployeeManagement/job-title/job-title.component';
-import { EmployeeDataImportExportComponent } from './EmployeeManagement/employee-data-import-export/employee-data-import-export.component'; // Ensure HomeComponent is imported
+import { EmployeeDataImportExportComponent } from './EmployeeManagement/employee-data-import-export/employee-data-import-export.component';
 import { JobTitleService } from './EmployeeManagement/job-title/job-title.service';
+import { AppRoutingModule } from './app-routing.module'; // Ensure the AppRoutingModule is imported
+import { EmployeeLifecycleService } from './EmployeeManagement/employee-lifecycle/employee-lifecycle.service';
+import { EmployeeDataImportExportService } from './EmployeeManagement/employee-data-import-export/employee-data-import-export.service';
+import { EmployeeService } from './EmployeeManagement/employee/employee.service';
+import { ApplicantComponent } from './RecruitmentManagement/applicant/applicant.component';
+import { InterviewComponent } from './RecruitmentManagement/interview/interview.component';
+import { JobPostingComponent } from './RecruitmentManagement/job-posting/job-posting.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EnrollmentComponent } from './BenefitsAdministration/enrollment/enrollment.component';
 
 @NgModule({
   declarations: [
@@ -65,19 +69,27 @@ import { JobTitleService } from './EmployeeManagement/job-title/job-title.servic
     EmployeeComponent,
     EmployeeLifecycleComponent,
     JobTitleComponent,
-    EmployeeDataImportExportComponent, // Add HomeComponent to declarations
+    EmployeeDataImportExportComponent,
+    ApplicantComponent,
+    InterviewComponent,
+    JobPostingComponent,
+    EnrollmentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     DepartmentServices,
     JobTitleService,
-    HttpClientModule// Add other services here if needed
+    EmployeeLifecycleService,
+    EmployeeDataImportExportService,
+    EmployeeService,
+    // Add other services here if needed
   ],
   bootstrap: [AppComponent]
 })

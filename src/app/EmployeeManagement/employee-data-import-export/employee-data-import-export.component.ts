@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { EmployeeDataImportExportService } from './employee-data-import-export.service';
 import { EmployeeDataImportExport } from './employee-data-import-export.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-data-import-export',
@@ -18,6 +19,7 @@ export class EmployeeDataImportExportComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private routes: Router,
     private service: EmployeeDataImportExportService
   ) { }
 

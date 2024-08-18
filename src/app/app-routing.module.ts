@@ -31,14 +31,20 @@ import { JobTitleComponent } from './EmployeeManagement/job-title/job-title.comp
 import { EmployeeLifecycleComponent } from './EmployeeManagement/employee-lifecycle/employee-lifecycle.component';
 import { EmployeeDataImportExportComponent } from './EmployeeManagement/employee-data-import-export/employee-data-import-export.component';
 import { EmployeeComponent } from './EmployeeManagement/employee/employee.component';
+import { HomeComponent }from'../app/home/home.component'
+import { JobPostingComponent } from './RecruitmentManagement/job-posting/job-posting.component';
+
 
 const routes: Routes = [
+  { path: '', redirectTo: '/HomePage', pathMatch: 'full' },
+  { path: 'HomePage', component: HomeComponent },
   { path: 'department', component: DepartmentComponent },
   { path: 'job-title', component: JobTitleComponent },
+  { path: 'job-posting', component: JobPostingComponent },
   { path: 'employee-lifecycle', component: EmployeeLifecycleComponent },
   { path: 'employee-data-import-export', component: EmployeeDataImportExportComponent },
   { path: 'employee', component: EmployeeComponent },
-  { path: '', redirectTo: '/employee', pathMatch: 'full' },
+ // { path: '', redirectTo: '/employee', pathMatch: 'full' },
 ];
 
 @NgModule({

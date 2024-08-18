@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee.model';
 import { JobTitleService } from '../job-title/job-title.service'; // Add import
@@ -23,6 +24,7 @@ export class EmployeeComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private routes: Router,
     private employeeService: EmployeeService,
     private jobTitleService: JobTitleService, // Add this line
     private departmentService: DepartmentServices // Add this line

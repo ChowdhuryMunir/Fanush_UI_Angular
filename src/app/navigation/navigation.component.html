@@ -1,33 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Employee Management</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/departments">Departments</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/jobTitle">JobTitle</a>
-      </li>
-    </ul>
-    <!-- Dropdown for departments (optional) -->
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown" *ngIf="departments && departments.length">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select Department
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a *ngFor="let department of departments" class="dropdown-item" href="#">
-            {{ department.departmentName }}
-          </a>
-          
-        </div>
-      </li>
-    </ul>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="col-2 col-md-2 bg-dark text-white position-fixed vh-100" style="width: 20%;">
+      <div class="sidebar-header">
+        <h3>Employee Management</h3>
+        <ul class="list-unstyled components">
+          <li><a routerLink="/department" routerLinkActive="active">Departments</a></li>
+          <li><a routerLink="/job-title" routerLinkActive="active">Job Titles</a></li>
+          <li><a routerLink="/employee-lifecycle" routerLinkActive="active">Employee Lifecycle</a></li>
+          <li><a routerLink="/employee-data-import-export" routerLinkActive="active">Data Import/Export</a></li>
+          <li><a routerLink="/employee" routerLinkActive="active">Employees</a></li>
+        </ul>
+
+        <h3>RecruitmentManagement</h3>
+        <ul class="list-unstyled components">
+          <li><a routerLink="/job-posting" routerLinkActive="active">Job Posting</a></li>
+          <li><a routerLink="/interview" routerLinkActive="active">Interview</a></li>
+          <li><a routerLink="/applicnt" routerLinkActive="active">Applicant</a></li>
+          <li><a routerLink="/WorkExperience" routerLinkActive="active">WorkExperience</a></li>
+          <li><a routerLink="/Education" routerLinkActive="active">Education</a></li>
+        </ul>
+      </div>
+      
+
+    </nav>
+
+    <!-- Content Area -->
+    <div id="content" class="col offset-2 offset-md-2" style="margin-left: 20%;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button id="sidebarCollapse" class="btn btn-dark">
+          <i class="fas fa-bars"></i>
+          <a routerLink="/HomePage" routerLinkActive="active">Home</a>
+        </button>
+      </nav>
+      <div class="container mt-4">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </div>
-</nav>
+</div>

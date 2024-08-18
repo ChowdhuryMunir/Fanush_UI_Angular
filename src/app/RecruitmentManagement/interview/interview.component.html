@@ -1,0 +1,124 @@
+<!--<div class="container">
+  <h2>Interview Management</h2>-->
+
+  <!-- Success or error message -->
+  <!--<div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>-->
+
+  <!-- Interview Form -->
+  <!--<form [formGroup]="interviewForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label for="dateTime">Date and Time</label>
+      <input type="datetime-local" id="dateTime" class="form-control" formControlName="dateTime" />
+      <div *ngIf="interviewForm.get('dateTime').invalid && interviewForm.get('dateTime').touched" class="text-danger">
+        Date and Time is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" id="location" class="form-control" formControlName="location" />
+      <div *ngIf="interviewForm.get('location').invalid && interviewForm.get('location').touched" class="text-danger">
+        Location is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea id="notes" class="form-control" formControlName="notes"></textarea>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+      <label for="isActive" class="form-check-label">Is Active</label>
+    </div>
+
+    <div class="form-group">
+      <label for="interviewer">Interviewer</label>
+      <input type="text" id="interviewer" class="form-control" formControlName="interviewer" />
+      <div *ngIf="interviewForm.get('interviewer').invalid && interviewForm.get('interviewer').touched" class="text-danger">
+        Interviewer is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="applicantId">Applicant ID</label>
+      <input type="number" id="applicantId" class="form-control" formControlName="applicantId" />
+      <div *ngIf="interviewForm.get('applicantId').invalid && interviewForm.get('applicantId').touched" class="text-danger">
+        Applicant ID is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="interviewType">Interview Type</label>
+      <select id="interviewType" class="form-control" formControlName="interviewType">
+        <option *ngFor="let type of interviewTypes | keyvalue" [value]="type.value">{{ type.key }}</option>
+      </select>
+      <div *ngIf="interviewForm.get('interviewType').invalid && interviewForm.get('interviewType').touched" class="text-danger">
+        Interview Type is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="durationMinutes">Duration (minutes)</label>
+      <input type="number" id="durationMinutes" class="form-control" formControlName="durationMinutes" />
+      <div *ngIf="interviewForm.get('durationMinutes').invalid && interviewForm.get('durationMinutes').touched" class="text-danger">
+        Duration must be a positive integer.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="feedback">Feedback</label>
+      <textarea id="feedback" class="form-control" formControlName="feedback"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="outcome">Outcome</label>
+      <input type="text" id="outcome" class="form-control" formControlName="outcome" />
+    </div>
+
+    <div class="form-group">
+      <label for="followUp">Follow-Up</label>
+      <textarea id="followUp" class="form-control" formControlName="followUp"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      {{ interviewIdUpdate == null ? 'Save' : 'Update' }}
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+  </form>-->
+
+  <!-- Interviews List -->
+  <!--<h3 class="mt-4">Interviews List</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date and Time</th>
+        <th>Location</th>
+        <th>Interviewer</th>
+        <th>Applicant ID</th>
+        <th>Interview Type</th>
+        <th>Duration (minutes)</th>
+        <th>Is Active</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let interview of allInterviews | async">
+        <td>{{ interview.dateTime | date:'short' }}</td>
+        <td>{{ interview.location }}</td>
+        <td>{{ interview.interviewer }}</td>
+        <td>{{ interview.applicantId }}</td>
+        <td>{{ interview.interviewType | titlecase }}</td>
+        <td>{{ interview.durationMinutes }}</td>
+        <td>{{ interview.isActive ? 'Yes' : 'No' }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="loadInterviewToEdit(interview.interviewId)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteInterview(interview.interviewId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+
