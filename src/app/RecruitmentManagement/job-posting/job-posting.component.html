@@ -1,167 +1,176 @@
-<div class="container">
-  <h2>Job Posting Management</h2>
 
-  <!-- Success or error message -->
-  <div *ngIf="message" class="alert alert-success" role="alert">
-    {{ message }}
+  <div class="container">
+    <h2>Job Posting Management</h2>
+
+    <!-- Success or error message -->
+    <div *ngIf="message" class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+
+    <!-- Add Job Posting Button -->
+    <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Job Posting</button>
+
+    <!-- Job Postings List -->
+    <div *ngIf="!isAdding">
+      <h3 class="mt-4">Job Postings List</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Posting Date</th>
+            <th>Application Deadline</th>
+            <th>Start Date</th>
+            <th>City</th>
+            <th>Contact Email</th>
+            <th>Contact Phone</th>
+            <th>Salary Information</th>
+            <th>Requirements</th>
+            <th>Job Type</th>
+            <th>Experience Required</th>
+            <th>Education Required</th>
+            <th>Skills Required</th>
+            <th>Benefits Offered</th>
+            <th>Work Schedule</th>
+            <th>Is Remote Work</th>
+            <th>Is Active</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let jobPosting of allJobPostings | async">
+            <td>{{ jobPosting.title }}</td>
+            <td>{{ jobPosting.description }}</td>
+            <td>{{ jobPosting.postingDate | date }}</td>
+            <td>{{ jobPosting.applicationDeadline | date }}</td>
+            <td>{{ jobPosting.startDate | date }}</td>
+            <td>{{ jobPosting.city }}</td>
+            <td>{{ jobPosting.contactEmail }}</td>
+            <td>{{ jobPosting.contactPhone }}</td>
+            <td>{{ jobPosting.salaryInformation }}</td>
+            <td>{{ jobPosting.requirements }}</td>
+            <td>{{ jobPosting.jobType }}</td>
+            <td>{{ jobPosting.experienceRequired }}</td>
+            <td>{{ jobPosting.educationRequired }}</td>
+            <td>{{ jobPosting.skillsRequired }}</td>
+            <td>{{ jobPosting.benefitsOffered }}</td>
+            <td>{{ jobPosting.workSchedule }}</td>
+            <td>{{ jobPosting.isRemoteWork ? 'Yes' : 'No' }}</td>
+            <td>{{ jobPosting.isActive ? 'Yes' : 'No' }}</td>
+            <td>
+              <button class="btn btn-warning btn-sm" (click)="loadJobPostingToEdit(jobPosting.jobPostingId)">
+                Edit
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="deleteJobPosting(jobPosting.jobPostingId)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Job Posting Form -->
+    <div *ngIf="isAdding">
+      <form [formGroup]="jobPostingForm" (ngSubmit)="onFormSubmit()">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" class="form-control" formControlName="title" />
+          <div *ngIf="jobPostingForm.get('title').invalid && jobPostingForm.get('title').touched" class="text-danger">
+            Title is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" class="form-control" formControlName="description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="postingDate">Posting Date</label>
+          <input type="date" id="postingDate" class="form-control" formControlName="postingDate" />
+        </div>
+
+        <div class="form-group">
+          <label for="applicationDeadline">Application Deadline</label>
+          <input type="date" id="applicationDeadline" class="form-control" formControlName="applicationDeadline" />
+        </div>
+
+        <div class="form-group">
+          <label for="startDate">Start Date</label>
+          <input type="date" id="startDate" class="form-control" formControlName="startDate" />
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" class="form-control" formControlName="city" />
+        </div>
+
+        <div class="form-group">
+          <label for="contactEmail">Contact Email</label>
+          <input type="email" id="contactEmail" class="form-control" formControlName="contactEmail" />
+        </div>
+
+        <div class="form-group">
+          <label for="contactPhone">Contact Phone</label>
+          <input type="tel" id="contactPhone" class="form-control" formControlName="contactPhone" />
+        </div>
+
+        <div class="form-group">
+          <label for="salaryInformation">Salary Information</label>
+          <input type="text" id="salaryInformation" class="form-control" formControlName="salaryInformation" />
+        </div>
+
+        <div class="form-group">
+          <label for="requirements">Requirements</label>
+          <textarea id="requirements" class="form-control" formControlName="requirements"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="jobType">Job Type</label>
+          <input type="text" id="jobType" class="form-control" formControlName="jobType" />
+        </div>
+
+        <div class="form-group">
+          <label for="experienceRequired">Experience Required</label>
+          <input type="text" id="experienceRequired" class="form-control" formControlName="experienceRequired" />
+        </div>
+
+        <div class="form-group">
+          <label for="educationRequired">Education Required</label>
+          <input type="text" id="educationRequired" class="form-control" formControlName="educationRequired" />
+        </div>
+
+        <div class="form-group">
+          <label for="skillsRequired">Skills Required</label>
+          <input type="text" id="skillsRequired" class="form-control" formControlName="skillsRequired" />
+        </div>
+
+        <div class="form-group">
+          <label for="benefitsOffered">Benefits Offered</label>
+          <input type="text" id="benefitsOffered" class="form-control" formControlName="benefitsOffered" />
+        </div>
+
+        <div class="form-group">
+          <label for="workSchedule">Work Schedule</label>
+          <input type="text" id="workSchedule" class="form-control" formControlName="workSchedule" />
+        </div>
+
+        <div class="form-group form-check">
+          <input type="checkbox" id="isRemoteWork" class="form-check-input" formControlName="isRemoteWork" />
+          <label for="isRemoteWork" class="form-check-label">Is Remote Work</label>
+        </div>
+
+        <div class="form-group form-check">
+          <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+          <label for="isActive" class="form-check-label">Is Active</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          {{ jobPostingIdUpdate == null ? 'Save' : 'Update' }}
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+        <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+      </form>
+    </div>
   </div>
-
-  <!-- Job Posting Form -->
-  <form [formGroup]="jobPostingForm" (ngSubmit)="onFormSubmit()">
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" id="title" class="form-control" formControlName="title" />
-      <div *ngIf="jobPostingForm.get('title').invalid && jobPostingForm.get('title').touched" class="text-danger">
-        Title is required.
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="description">Description</label>
-      <textarea id="description" class="form-control" formControlName="description"></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="postingDate">Posting Date</label>
-      <input type="date" id="postingDate" class="form-control" formControlName="postingDate" />
-    </div>
-
-    <div class="form-group">
-      <label for="applicationDeadline">Application Deadline</label>
-      <input type="date" id="applicationDeadline" class="form-control" formControlName="applicationDeadline" />
-    </div>
-
-    <div class="form-group">
-      <label for="startDate">Start Date</label>
-      <input type="date" id="startDate" class="form-control" formControlName="startDate" />
-    </div>
-
-    <div class="form-group">
-      <label for="city">City</label>
-      <input type="text" id="city" class="form-control" formControlName="city" />
-    </div>
-
-    <div class="form-group">
-      <label for="contactEmail">Contact Email</label>
-      <input type="email" id="contactEmail" class="form-control" formControlName="contactEmail" />
-    </div>
-
-    <div class="form-group">
-      <label for="contactPhone">Contact Phone</label>
-      <input type="tel" id="contactPhone" class="form-control" formControlName="contactPhone" />
-    </div>
-
-    <div class="form-group">
-      <label for="salaryInformation">Salary Information</label>
-      <input type="text" id="salaryInformation" class="form-control" formControlName="salaryInformation" />
-    </div>
-
-    <div class="form-group">
-      <label for="requirements">Requirements</label>
-      <textarea id="requirements" class="form-control" formControlName="requirements"></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="jobType">Job Type</label>
-      <input type="text" id="jobType" class="form-control" formControlName="jobType" />
-    </div>
-
-    <div class="form-group">
-      <label for="experienceRequired">Experience Required</label>
-      <input type="text" id="experienceRequired" class="form-control" formControlName="experienceRequired" />
-    </div>
-
-    <div class="form-group">
-      <label for="educationRequired">Education Required</label>
-      <input type="text" id="educationRequired" class="form-control" formControlName="educationRequired" />
-    </div>
-
-    <div class="form-group">
-      <label for="skillsRequired">Skills Required</label>
-      <input type="text" id="skillsRequired" class="form-control" formControlName="skillsRequired" />
-    </div>
-
-    <div class="form-group">
-      <label for="benefitsOffered">Benefits Offered</label>
-      <input type="text" id="benefitsOffered" class="form-control" formControlName="benefitsOffered" />
-    </div>
-
-    <div class="form-group">
-      <label for="workSchedule">Work Schedule</label>
-      <input type="text" id="workSchedule" class="form-control" formControlName="workSchedule" />
-    </div>
-
-    <div class="form-group form-check">
-      <input type="checkbox" id="isRemoteWork" class="form-check-input" formControlName="isRemoteWork" />
-      <label for="isRemoteWork" class="form-check-label">Is Remote Work</label>
-    </div>
-
-    <div class="form-group form-check">
-      <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
-      <label for="isActive" class="form-check-label">Is Active</label>
-    </div>
-
-    <button type="submit" class="btn btn-primary">
-      {{ jobPostingIdUpdate == null ? 'Save' : 'Update' }}
-    </button>
-    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
-  </form>
-
-  <!-- Job Postings List -->
-  <h3 class="mt-4">Job Postings List</h3>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Posting Date</th>
-        <th>Application Deadline</th>
-        <th>Start Date</th>
-        <th>City</th>
-        <th>Contact Email</th>
-        <th>Contact Phone</th>
-        <th>Salary Information</th>
-        <th>Requirements</th>
-        <th>Job Type</th>
-        <th>Experience Required</th>
-        <th>Education Required</th>
-        <th>Skills Required</th>
-        <th>Benefits Offered</th>
-        <th>Work Schedule</th>
-        <th>Is Remote Work</th>
-        <th>Is Active</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let jobPosting of allJobPostings | async">
-        <td>{{ jobPosting.title }}</td>
-        <td>{{ jobPosting.description }}</td>
-        <td>{{ jobPosting.postingDate | date }}</td>
-        <td>{{ jobPosting.applicationDeadline | date }}</td>
-        <td>{{ jobPosting.startDate | date }}</td>
-        <td>{{ jobPosting.city }}</td>
-        <td>{{ jobPosting.contactEmail }}</td>
-        <td>{{ jobPosting.contactPhone }}</td>
-        <td>{{ jobPosting.salaryInformation }}</td>
-        <td>{{ jobPosting.requirements }}</td>
-        <td>{{ jobPosting.jobType }}</td>
-        <td>{{ jobPosting.experienceRequired }}</td>
-        <td>{{ jobPosting.educationRequired }}</td>
-        <td>{{ jobPosting.skillsRequired }}</td>
-        <td>{{ jobPosting.benefitsOffered }}</td>
-        <td>{{ jobPosting.workSchedule }}</td>
-        <td>{{ jobPosting.isRemoteWork ? 'Yes' : 'No' }}</td>
-        <td>{{ jobPosting.isActive ? 'Yes' : 'No' }}</td>
-        <td>
-          <button class="btn btn-warning btn-sm" (click)="loadJobPostingToEdit(jobPosting.jobPostingId)">
-            Edit
-          </button>
-          <button class="btn btn-danger btn-sm" (click)="deleteJobPosting(jobPosting.jobPostingId)">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>

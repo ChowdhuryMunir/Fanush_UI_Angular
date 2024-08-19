@@ -1,8 +1,7 @@
-
 <div class="container-fluid">
   <div class="row">
     <!-- Sidebar -->
-    <nav id="sidebar" class="col-2 col-md-2 bg-dark text-white position-fixed vh-100" style="width: 20%;">
+    <nav id="sidebar" class="bg-dark text-white vh-100">
       <div class="sidebar-header">
         <h3>Employee Management</h3>
         <ul class="list-unstyled components">
@@ -13,30 +12,29 @@
           <li><a routerLink="/employee" routerLinkActive="active">Employees</a></li>
         </ul>
 
-        <h3>RecruitmentManagement</h3>
+        <h3>Recruitment Management</h3>
         <ul class="list-unstyled components">
           <li><a routerLink="/job-posting" routerLinkActive="active">Job Posting</a></li>
           <li><a routerLink="/interview" routerLinkActive="active">Interview</a></li>
-          <li><a routerLink="/applicnt" routerLinkActive="active">Applicant</a></li>
-          <li><a routerLink="/WorkExperience" routerLinkActive="active">WorkExperience</a></li>
+          <li><a routerLink="/applicant" routerLinkActive="active">Applicant</a></li>
+          <li><a routerLink="/WorkExperience" routerLinkActive="active">Work Experience</a></li>
           <li><a routerLink="/Education" routerLinkActive="active">Education</a></li>
         </ul>
       </div>
-      
-
     </nav>
 
     <!-- Content Area -->
-    <div id="content" class="col offset-2 offset-md-2" style="margin-left: 20%;">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button id="sidebarCollapse" class="btn btn-dark">
-          <i class="fas fa-bars"></i>
-          <a routerLink="/HomePage" routerLinkActive="active">Home</a>
-        </button>
-      </nav>
-      <div class="container mt-4">
-        <router-outlet></router-outlet>
+    <div id="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button id="sidebarCollapse" class="btn btn-dark">
+              <i class="fas fa-bars"></i>
+              <a routerLink="/HomePage" routerLinkActive="active">Home</a>
+            </button>
+          </nav>
+          <div class="container mt-4">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    

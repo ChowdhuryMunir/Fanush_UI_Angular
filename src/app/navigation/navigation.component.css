@@ -1,17 +1,15 @@
 /* Sidebar */
 #sidebar {
-  transition: all 0.3s;
-  width: 0;
+  width: 20%; /* Make sure this is not set to 0 */
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   z-index: 1000;
-  background-color: #343a40; /* Dark background */
+  background-color: #343a40; /* Ensure the background color is set */
   padding-top: 60px;
 }
-
   #sidebar.active {
     width: 20%;
   }
@@ -19,16 +17,17 @@
 /* Content */
 #content {
   transition: all 0.3s;
-  width: 100%;
+  margin-left: 20%; /* Aligns content to the sidebar */
+  width: 80%;
 }
 
-  /*#content.active {
-    margin-left: 20%;
+  #content.active {
+    margin-left: 20%; /* Same as above */
     width: 80%;
-  }*/
+  }
 
 /* Sidebar Toggle Button */
-/*#sidebarCollapse {
+#sidebarCollapse {
   background: none;
   border: none;
   outline: none;
@@ -43,7 +42,8 @@
 
 .components {
   padding: 20px 0;
-}*/
+}
+
 @media (max-width: 768px) {
   #sidebar {
     width: 100%;
@@ -53,5 +53,6 @@
 
   #content {
     margin-left: 0;
+    width: 100%;
   }
 }

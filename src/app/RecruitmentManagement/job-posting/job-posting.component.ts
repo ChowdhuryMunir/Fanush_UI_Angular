@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -16,6 +17,7 @@ export class JobPostingComponent implements OnInit {
   allJobPostings: Observable<JobPosting[]> = this.jobPostingService.getAllJobPostings();
   jobPostingIdUpdate: number | null = null;
   message: string = "";
+  isAdding: boolean = false; // Add this property
 
   constructor(
     private formBuilder: FormBuilder,
@@ -56,6 +58,7 @@ export class JobPostingComponent implements OnInit {
     const jobPosting = this.jobPostingForm.value;
     this.createOrUpdateJobPosting(jobPosting);
     this.jobPostingForm.reset();
+    this.isAdding = false; // Reset isAdding when form is submitted
   }
 
   loadJobPostingToEdit(jobPostingId: number) {
@@ -64,6 +67,7 @@ export class JobPostingComponent implements OnInit {
       this.dataSaved = false;
       this.jobPostingIdUpdate = jobPosting.jobPostingId;
       this.jobPostingForm.patchValue(jobPosting);
+      this.isAdding = true; // Set isAdding to true when editing a job posting
     });
   }
 
@@ -104,5 +108,16 @@ export class JobPostingComponent implements OnInit {
     this.jobPostingForm.reset();
     this.message = "";
     this.dataSaved = false;
+    this.isAdding = false; // Reset isAdding when form is reset
+  }
+
+  startAdding() {
+    this.isAdding = true; // Set isAdding to true to show form for adding
+  }
+
+  cancelAdding() {
+    this.isAdding = false; // Set isAdding to false to hide form
+    this.resetForm();
   }
 }
+
