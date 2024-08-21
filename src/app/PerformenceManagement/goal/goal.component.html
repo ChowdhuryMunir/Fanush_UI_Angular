@@ -1,0 +1,96 @@
+<div class="container">
+  <h2>Goal Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Goal Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Goal</button>
+
+  <!-- Goals List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Goals List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Status</th>
+          <th>Progress</th>
+          <th>Is Active</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let goal of allGoals | async">
+          <td>{{ goal.title }}</td>
+          <td>{{ goal.description }}</td>
+          <td>{{ goal.startDate | date }}</td>
+          <td>{{ goal.endDate | date }}</td>
+          <td>{{ goal.goalStatus }}</td>
+          <td>{{ goal.progress }}%</td>
+          <td>{{ goal.isActive ? 'Yes' : 'No' }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadGoalToEdit(goal.goalId)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteGoal(goal.goalId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Goal Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="goalForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" class="form-control" formControlName="title" />
+        <div *ngIf="goalForm.get('title').invalid && goalForm.get('title').touched" class="text-danger">
+          Title is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" class="form-control" formControlName="description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" class="form-control" formControlName="startDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate" class="form-control" formControlName="endDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="goalStatus">Status</label>
+        <select id="goalStatus" class="form-control" formControlName="goalStatus">
+          <option *ngFor="let status of ['Pending', 'Approved', 'Rejected']">{{status}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="progress">Progress (%)</label>
+        <input type="number" id="progress" class="form-control" formControlName="progress" />
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+        <label for="isActive" class="form-check-label">Is Active</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        {{ goalIdUpdate == null ? 'Save' : 'Update' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>

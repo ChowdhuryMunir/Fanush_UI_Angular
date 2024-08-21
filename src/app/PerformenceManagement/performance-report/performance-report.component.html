@@ -1,0 +1,152 @@
+<div class="container">
+  <h2>Performance Report Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Performance Report Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Performance Report</button>
+
+  <!-- Performance Reports List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Performance Reports List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Evaluator ID</th>
+          <th>Evaluation Date</th>
+          <th>Performance Score</th>
+          <th>Strengths</th>
+          <th>Areas for Improvement</th>
+          <th>Overall Rating</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of allPerformanceReports | async">
+          <td>{{ report.employeeId }}</td>
+          <td>{{ report.evaluatorId }}</td>
+          <td>{{ report.evaluationDate | date }}</td>
+          <td>{{ report.performanceScore }}</td>
+          <td>{{ report.strengths }}</td>
+          <td>{{ report.areasForImprovement }}</td>
+          <td>{{ report.overallRating }}</td>
+          <td>{{ report.status }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadPerformanceReportToEdit(report.performanceReportId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deletePerformanceReport(report.performanceReportId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Performance Report Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="performanceReportForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" class="form-control" formControlName="employeeId" />
+        <div *ngIf="performanceReportForm.get('employeeId').invalid && performanceReportForm.get('employeeId').touched" class="text-danger">
+          Employee ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="evaluatorId">Evaluator ID</label>
+        <input type="number" id="evaluatorId" class="form-control" formControlName="evaluatorId" />
+        <div *ngIf="performanceReportForm.get('evaluatorId').invalid && performanceReportForm.get('evaluatorId').touched" class="text-danger">
+          Evaluator ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="evaluationDate">Evaluation Date</label>
+        <input type="date" id="evaluationDate" class="form-control" formControlName="evaluationDate" />
+        <div *ngIf="performanceReportForm.get('evaluationDate').invalid && performanceReportForm.get('evaluationDate').touched" class="text-danger">
+          Evaluation Date is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="performanceScore">Performance Score</label>
+        <input type="number" id="performanceScore" class="form-control" formControlName="performanceScore" />
+      </div>
+
+      <div class="form-group">
+        <label for="goalsMet">Goals Met</label>
+        <input type="text" id="goalsMet" class="form-control" formControlName="goalsMet" />
+      </div>
+
+      <div class="form-group">
+        <label for="strengths">Strengths</label>
+        <textarea id="strengths" class="form-control" formControlName="strengths"></textarea>
+        <div *ngIf="performanceReportForm.get('strengths').invalid && performanceReportForm.get('strengths').touched" class="text-danger">
+          Strengths are required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="areasForImprovement">Areas for Improvement</label>
+        <textarea id="areasForImprovement" class="form-control" formControlName="areasForImprovement"></textarea>
+        <div *ngIf="performanceReportForm.get('areasForImprovement').invalid && performanceReportForm.get('areasForImprovement').touched" class="text-danger">
+          Areas for Improvement are required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="achievements">Achievements</label>
+        <textarea id="achievements" class="form-control" formControlName="achievements"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="developmentPlan">Development Plan</label>
+        <textarea id="developmentPlan" class="form-control" formControlName="developmentPlan"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" class="form-control" formControlName="comments"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="overallRating">Overall Rating</label>
+        <input type="text" id="overallRating" class="form-control" formControlName="overallRating" />
+      </div>
+
+      <div class="form-group">
+        <label for="reviewPeriodStart">Review Period Start</label>
+        <input type="date" id="reviewPeriodStart" class="form-control" formControlName="reviewPeriodStart" />
+      </div>
+
+      <div class="form-group">
+        <label for="reviewPeriodEnd">Review Period End</label>
+        <input type="date" id="reviewPeriodEnd" class="form-control" formControlName="reviewPeriodEnd" />
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" id="status" class="form-control" formControlName="status" />
+        <div *ngIf="performanceReportForm.get('status').invalid && performanceReportForm.get('status').touched" class="text-danger">
+          Status is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="actionItems">Action Items</label>
+        <textarea id="actionItems" class="form-control" formControlName="actionItems"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>

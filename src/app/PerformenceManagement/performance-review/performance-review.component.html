@@ -1,0 +1,110 @@
+<div class="container">
+  <h2>Performance Review Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Performance Review Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Performance Review</button>
+
+  <!-- Performance Reviews List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Performance Reviews List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Reviewer ID</th>
+          <th>Feedback</th>
+          <th>Performance Rating</th>
+          <th>Comments</th>
+          <th>Review Date</th>
+          <th>Review Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let performanceReview of allPerformanceReviews | async">
+          <td>{{ performanceReview.employeeId }}</td>
+          <td>{{ performanceReview.reviewerId }}</td>
+          <td>{{ performanceReview.feedback }}</td>
+          <td>{{ performanceReview.performanceRating }}</td>
+          <td>{{ performanceReview.comments }}</td>
+          <td>{{ performanceReview.reviewDate | date }}</td>
+          <td>{{ performanceReview.reviewType }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadPerformanceReviewToEdit(performanceReview.performanceReviewId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deletePerformanceReview(performanceReview.performanceReviewId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Performance Review Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="performanceReviewForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" class="form-control" formControlName="employeeId" />
+        <div *ngIf="performanceReviewForm.get('employeeId').invalid && performanceReviewForm.get('employeeId').touched" class="text-danger">
+          Employee ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="reviewerId">Reviewer ID</label>
+        <input type="number" id="reviewerId" class="form-control" formControlName="reviewerId" />
+        <div *ngIf="performanceReviewForm.get('reviewerId').invalid && performanceReviewForm.get('reviewerId').touched" class="text-danger">
+          Reviewer ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" class="form-control" formControlName="feedback"></textarea>
+        <div *ngIf="performanceReviewForm.get('feedback').invalid && performanceReviewForm.get('feedback').touched" class="text-danger">
+          Feedback is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="performanceRating">Performance Rating</label>
+        <input type="number" id="performanceRating" class="form-control" formControlName="performanceRating" />
+        <div *ngIf="performanceReviewForm.get('performanceRating').invalid && performanceReviewForm.get('performanceRating').touched" class="text-danger">
+          Performance Rating is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" class="form-control" formControlName="comments"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="reviewDate">Review Date</label>
+        <input type="date" id="reviewDate" class="form-control" formControlName="reviewDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="reviewType">Review Type</label>
+        <input type="text" id="reviewType" class="form-control" formControlName="reviewType" />
+        <div *ngIf="performanceReviewForm.get('reviewType').invalid && performanceReviewForm.get('reviewType').touched" class="text-danger">
+          Review Type is required.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        {{ performanceReviewIdUpdate == null ? 'Save' : 'Update' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>

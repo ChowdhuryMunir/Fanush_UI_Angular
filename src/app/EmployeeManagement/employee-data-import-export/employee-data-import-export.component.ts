@@ -11,87 +11,88 @@ import { EmployeeDataImportExport } from './employee-data-import-export.model';
 })
 export class EmployeeDataImportExportComponent implements OnInit {
   dataSaved = false;
-  dataImportExportForm: any;
-  allEmployeeDataImportExports: Observable<EmployeeDataImportExport[]> = this.service.getAllEmployeeDataImportExports();
-  importExportIdUpdate: number | null = null;
+  employeeDataImportExportForm: any;
+  allEmployeeDataImportExports: Observable<EmployeeDataImportExport[]> = this.employeeDataImportExportService.getAllEmployeeDataImportExports();
+  employeeDataImportExportIdUpdate: number | null = null;
   message: string = "";
+  isAdding: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    private service: EmployeeDataImportExportService
+    private employeeDataImportExportService: EmployeeDataImportExportService
   ) { }
 
   ngOnInit() {
-    this.dataImportExportForm = this.formBuilder.group({
+    this.employeeDataImportExportForm = this.formBuilder.group({
       type: ['', [Validators.required]],
       fileName: ['', [Validators.required]],
       filePath: ['', [Validators.required]],
-      importExportDate: ['', [Validators.required]],
+      importExportDate: [''],
       isActive: [false]
     });
     this.loadAllEmployeeDataImportExports();
   }
 
   loadAllEmployeeDataImportExports() {
-    this.allEmployeeDataImportExports = this.service.getAllEmployeeDataImportExports();
+    this.allEmployeeDataImportExports = this.employeeDataImportExportService.getAllEmployeeDataImportExports();
   }
 
   onFormSubmit() {
     this.dataSaved = false;
-    const dataImportExport = this.dataImportExportForm.value;
-    this.createOrUpdateDataImportExport(dataImportExport);
-    this.dataImportExportForm.reset();
+    const employeeDataImportExport = this.employeeDataImportExportForm.value;
+    this.createOrUpdateEmployeeDataImportExport(employeeDataImportExport);
+    this.employeeDataImportExportForm.reset();
+    this.isAdding = false;
   }
 
-  loadDataImportExportToEdit(importExportId: number) {
-    this.service.getEmployeeDataImportExportById(importExportId).subscribe(dataImportExport => {
+  loadEmployeeDataImportExportToEdit(importExportId: number) {
+    this.employeeDataImportExportService.getEmployeeDataImportExportById(importExportId).subscribe(employeeDataImportExport => {
       this.message = "";
       this.dataSaved = false;
-      this.importExportIdUpdate = dataImportExport.importExportId;
-      this.dataImportExportForm.get('type')?.setValue(dataImportExport.type);
-      this.dataImportExportForm.get('fileName')?.setValue(dataImportExport.fileName);
-      this.dataImportExportForm.get('filePath')?.setValue(dataImportExport.filePath);
-      this.dataImportExportForm.get('importExportDate')?.setValue(dataImportExport.importExportDate);
-      this.dataImportExportForm.get('isActive')?.setValue(dataImportExport.isActive);
+      this.employeeDataImportExportIdUpdate = employeeDataImportExport.importExportId;
+      this.employeeDataImportExportForm.patchValue(employeeDataImportExport);
+      this.isAdding = true;
     });
   }
 
-  createOrUpdateDataImportExport(dataImportExport: EmployeeDataImportExport) {
-    if (this.importExportIdUpdate == null) {
-      this.service.createEmployeeDataImportExport(dataImportExport).subscribe(() => {
+  createOrUpdateEmployeeDataImportExport(employeeDataImportExport: EmployeeDataImportExport) {
+    if (this.employeeDataImportExportIdUpdate == null) {
+      this.employeeDataImportExportService.createEmployeeDataImportExport(employeeDataImportExport).subscribe(() => {
         this.dataSaved = true;
         this.message = "Record Saved Successfully.";
         this.loadAllEmployeeDataImportExports();
-        this.importExportIdUpdate = null;
-        this.dataImportExportForm.reset();
+        this.employeeDataImportExportIdUpdate = null;
+        this.employeeDataImportExportForm.reset();
       });
     } else {
-      dataImportExport.importExportId = this.importExportIdUpdate;
-      this.service.updateEmployeeDataImportExport(this.importExportIdUpdate, dataImportExport).subscribe(() => {
+      employeeDataImportExport.importExportId = this.employeeDataImportExportIdUpdate;
+      this.employeeDataImportExportService.updateEmployeeDataImportExport(this.employeeDataImportExportIdUpdate, employeeDataImportExport).subscribe(() => {
         this.dataSaved = true;
         this.message = "Record Updated Successfully.";
         this.loadAllEmployeeDataImportExports();
-        this.importExportIdUpdate = null;
-        this.dataImportExportForm.reset();
+        this.employeeDataImportExportIdUpdate = null;
+        this.employeeDataImportExportForm.reset();
       });
     }
   }
 
-  deleteDataImportExport(id: number) {
-    if (confirm("Are You Sure To Delete This?")) {
-      this.service.deleteEmployeeDataImportExportById(id).subscribe(() => {
+  deleteEmployeeDataImportExport(id: number) {
+    if (confirm("Are you sure you want to delete this record?")) {
+      this.employeeDataImportExportService.deleteEmployeeDataImportExportById(id).subscribe(() => {
         this.dataSaved = true;
         this.message = "Record Deleted Successfully.";
         this.loadAllEmployeeDataImportExports();
-        this.importExportIdUpdate = null;
-        this.dataImportExportForm.reset();
       });
     }
   }
 
-  resetForm() {
-    this.dataImportExportForm.reset();
-    this.message = "";
-    this.dataSaved = false;
+  startAdding() {
+    this.isAdding = true;
+    this.employeeDataImportExportForm.reset();
+  }
+
+  cancelAdding() {
+    this.isAdding = false;
+    this.employeeDataImportExportForm.reset();
   }
 }

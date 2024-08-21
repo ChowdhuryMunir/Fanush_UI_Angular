@@ -1,0 +1,110 @@
+<div class="container">
+  <h2>Clock In/Out Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Clock In/Out Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Clock In/Out</button>
+
+  <!-- Clock In/Out Records List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Clock In/Out Records</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Timestamp</th>
+          <th>Action</th>
+          <th>Location</th>
+          <th>Clock In Time</th>
+          <th>Clock Out Time</th>
+          <th>Overtime Hours</th>
+          <th>Approved By</th>
+          <th>Is Active</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let clockInOut of allClockInOuts | async">
+          <td>{{ clockInOut.employeeId }}</td>
+          <td>{{ clockInOut.timestamp | date:'short' }}</td>
+          <td>{{ clockInOut.action }}</td>
+          <td>{{ clockInOut.location }}</td>
+          <td>{{ clockInOut.clockInTime | date:'short' }}</td>
+          <td>{{ clockInOut.clockOutTime | date:'short' }}</td>
+          <td>{{ clockInOut.overtimeHours }}</td>
+          <td>{{ clockInOut.approvedBy }}</td>
+          <td>{{ clockInOut.isActive ? 'Yes' : 'No' }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadClockInOutToEdit(clockInOut.clockInOutId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteClockInOut(clockInOut.clockInOutId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Clock In/Out Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="clockInOutForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" class="form-control" formControlName="employeeId" />
+        <div *ngIf="clockInOutForm.get('employeeId').invalid && clockInOutForm.get('employeeId').touched" class="text-danger">
+          Employee ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="action">Action</label>
+        <input type="text" id="action" class="form-control" formControlName="action" />
+        <div *ngIf="clockInOutForm.get('action').invalid && clockInOutForm.get('action').touched" class="text-danger">
+          Action is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" class="form-control" formControlName="location" />
+      </div>
+
+      <div class="form-group">
+        <label for="clockInTime">Clock In Time</label>
+        <input type="datetime-local" id="clockInTime" class="form-control" formControlName="clockInTime" />
+      </div>
+
+      <div class="form-group">
+        <label for="clockOutTime">Clock Out Time</label>
+        <input type="datetime-local" id="clockOutTime" class="form-control" formControlName="clockOutTime" />
+      </div>
+
+      <div class="form-group">
+        <label for="overtimeHours">Overtime Hours</label>
+        <input type="number" id="overtimeHours" class="form-control" formControlName="overtimeHours" />
+      </div>
+
+      <div class="form-group">
+        <label for="approvedBy">Approved By</label>
+        <input type="text" id="approvedBy" class="form-control" formControlName="approvedBy" />
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+        <label for="isActive" class="form-check-label">Is Active</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        {{ clockInOutIdUpdate == null ? 'Save' : 'Update' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>

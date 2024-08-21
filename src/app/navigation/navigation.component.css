@@ -1,0 +1,167 @@
+/* Sidebar */
+/*#sidebar {
+  width: 20%;*/ /* Make sure this is not set to 0 */
+  /*overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000;
+  background-color: #343a40;*/ /* Ensure the background color is set */
+  /*padding-top: 60px;
+}
+  #sidebar.active {
+    width: 20%;
+  }*/
+
+/* Content */
+/*#content {
+  transition: all 0.3s;
+  margin-left: 20%;*/ /* Aligns content to the sidebar */
+  /*width: 80%;
+}
+
+  #content.active {
+    margin-left: 20%;*/ /* Same as above */
+    /*width: 80%;
+  }*/
+
+/* Sidebar Toggle Button */
+/*#sidebarCollapse {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background: #343a40;
+}
+
+.components {
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  #content {
+    margin-left: 0;
+    width: 100%;
+  }
+}*/
+/* Sidebar *//*scrolling*/
+#sidebar {
+  width: 20%;
+  overflow-y: auto; /* Allows scrolling if content overflows */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000;
+  background-color: #343a40;
+  padding-top: 60px;
+}
+
+/* Content */
+#content {
+  margin-left: 20%; /* Aligns content to the sidebar */
+  width: 80%;
+  padding: 20px; /* Add padding to ensure content is not flush with the edges */
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  width: 20%;
+}
+
+#content.active {
+  margin-left: 20%; /* Same as above */
+  width: 80%;
+}
+
+/* Sidebar Toggle Button */
+#sidebarCollapse {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-header h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.components ul {
+  padding-left: 20px;
+}
+
+.components li {
+  padding: 10px 0;
+}
+
+  .components li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+  }
+
+    .components li a:hover {
+      color: #fff;
+    }
+
+    .components li a.active {
+      color: #fff;
+      font-weight: bold;
+    }
+
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    overflow-y: auto; /* Adds scrolling for smaller screens*/ 
+  }
+
+  #content {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px; /* Ensure padding on smaller screens*/ 
+  }
+
+  .sidebar-header h3 {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .components ul {
+    padding-left: 10px;
+  }
+
+  .components li {
+    padding: 8px 0;
+  }
+}
+
+h3 {
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 20px;
+  border-bottom: 1px solid #555;
+  font-size: 1.2rem;
+}
+
+.components {
+  margin-bottom: 20px; /* Adds space between sections */
+}

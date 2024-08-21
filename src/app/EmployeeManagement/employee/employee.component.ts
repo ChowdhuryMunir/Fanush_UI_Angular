@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee.model';
-import { JobTitleService } from '../job-title/job-title.service'; // Add import
-import { DepartmentServices } from '../department/department.service'; // Add import
 
 @Component({
   selector: 'app-employee',
@@ -12,44 +11,34 @@ import { DepartmentServices } from '../department/department.service'; // Add im
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+  dataSaved = false;
   employeeForm: any;
   allEmployees: Observable<Employee[]> = this.employeeService.getAllEmployees();
-  allJobTitles: any[] = []; // Add this line
-  allDepartments: any[] = []; // Add this line
   employeeIdUpdate: number | null = null;
-  message = "";
-  isEditMode = false;
-
+  message: string = "";
+  isAdding: boolean = false;
 
   constructor(
-    private fb: FormBuilder,
-    private employeeService: EmployeeService,
-    private jobTitleService: JobTitleService, // Add this line
-    private departmentService: DepartmentServices // Add this line
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private employeeService: EmployeeService
   ) { }
 
-  ngOnInit(): void {
-    this.initializeForm();
-    this.loadAllEmployees();
-    this.getJobTitles(); // Add this line
-    this.getDepartments(); // Add this line
-  }
-
-  initializeForm(): void {
-    this.employeeForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
-      gender: ['', Validators.required],
-      presentAddress: ['', Validators.required],
-      permanentAddress: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
+  ngOnInit() {
+    this.employeeForm = this.formBuilder.group({
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      dateOfBirth: ['', [Validators.required]],
+      gender: ['', [Validators.required]],
+      presentAddress: [''],
+      permanentAddress: [''],
+      phoneNumber: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      nationalId: ['', Validators.required],
+      nationalId: [''],
       passportNumber: [''],
-      dateOfJoining: ['', Validators.required],
-      jobTitleId: ['', Validators.required],
-      departmentId: ['', Validators.required],
+      dateOfJoining: ['', [Validators.required]],
+      jobTitleId: [0, [Validators.required]],
+      departmentId: [0, [Validators.required]],
       emergencyContactNumber: [''],
       fathersName: [''],
       mothersName: [''],
@@ -58,136 +47,83 @@ export class EmployeeComponent implements OnInit {
       maritalStatus: [''],
       nationality: [''],
       profileImagePath: [''],
-      extraActivities: [''],
-      isActive: [true]
+      isActive: [false]
     });
+    this.loadAllEmployees();
   }
 
   loadAllEmployees() {
-      this.allEmployees = this.employeeService.getAllEmployees();
-    }
-
-  getJobTitles(): void {
-    this.jobTitleService.getAllJobTitles().subscribe(
-      jobTitles => this.allJobTitles = jobTitles,
-      error => console.error('Error fetching job titles', error)
-    );
+    this.allEmployees = this.employeeService.getAllEmployees();
   }
 
-  getDepartments(): void {
-    this.departmentService.getAllDepartment().subscribe(
-      departments => this.allDepartments = departments,
-      error => console.error('Error fetching departments', error)
-    );
-  }
-
-  //onFormSubmit(): void {
-
-  //  if (this.employeeForm.valid) {
-  //    if (this.isEditMode) {
-  //      this.employeeService.updateEmployee(this.employeeForm.value.employeeId, this.employeeForm.value).subscribe(
-  //        () => this.message = 'Employee updated successfully',
-  //        error => console.error('Error updating employee', error)
-  //      );
-  //    } else {
-  //      this.employeeService.createEmployee(this.employeeForm.value).subscribe(
-  //        () => this.message = 'Employee created successfully',
-  //        error => console.error('Error creating employee', error)
-  //      );
-  //    }
-  //  }
-  //}
-  onFormSubmit(): void {
-    if (this.employeeForm.valid) {
-      const employee = this.employeeForm.value;
-
-      if (this.isEditMode && this.employeeIdUpdate !== null) {
-        // Update existing employee
-        this.employeeService.updateEmployee(this.employeeIdUpdate, employee).subscribe(
-          () => {
-            this.message = 'Employee updated successfully';
-            this.loadAllEmployees();
-            this.resetForm();
-          },
-          error => {
-            this.message = 'Error updating employee';
-            console.error('Error updating employee:', error);
-          }
-        );
-      } else {
-        // Create new employee
-        this.employeeService.createEmployee(employee).subscribe(
-          () => {
-            this.message = 'Employee created successfully';
-            this.loadAllEmployees();
-            this.resetForm();
-          },
-          error => {
-            this.message = 'Error creating employee';
-            console.error('Error creating employee:', error);
-          }
-        );
-      }
-    }
-  }
-
-
-  resetForm(): void {
-    this.employeeForm.reset();
-    this.isEditMode = false;
-    this.employeeIdUpdate = null;
-  }
-
-  loadEmployeeToEdit(employeeId: number): void {
-    this.employeeService.getEmployeeById(employeeId).subscribe(
-      employee => {
-        this.employeeForm.patchValue(employee);
-        this.isEditMode = true;
-      },
-      error => console.error('Error loading employee', error)
-    );
-  }
-
-  createOrUpdateEmployee(employee: Employee): void {
-    if (this.employeeIdUpdate === null) {
-      // Create new employee
-      this.employeeService.createEmployee(employee).subscribe(
-        () => {
-          this.message = "Record Created Successfully.";
-          this.loadAllEmployees();
-          this.employeeForm.reset();
-          this.isEditMode = false;
-        },
-        error => {
-          this.message = "Error creating employee.";
-          console.error("Error creating employee:", error);
-        }
-      );
+  onFormSubmit() {
+    this.dataSaved = false;
+    const employee = this.employeeForm.value;
+    if (this.employeeIdUpdate == null) {
+      this.createEmployee(employee);
     } else {
-      // Update existing employee
-      employee.employeeId = this.employeeIdUpdate;
-      this.employeeService.updateEmployee(this.employeeIdUpdate, employee).subscribe(
-        () => {
-          this.message = "Record Updated Successfully.";
-          this.loadAllEmployees();
-          this.employeeIdUpdate = null;
-          this.employeeForm.reset();
-          this.isEditMode = false;
-        },
-        error => {
-          this.message = "Error updating employee.";
-          console.error("Error updating employee:", error);
-        }
-      );
+      this.updateEmployee(this.employeeIdUpdate, employee);
+    }
+    this.employeeForm.reset();
+  }
+
+  createEmployee(employee: Employee) {
+    this.employeeService.createEmployee(employee).subscribe(() => {
+      this.dataSaved = true;
+      this.message = 'Employee record saved successfully!';
+      this.loadAllEmployees();
+      this.employeeIdUpdate = null;
+      this.employeeForm.reset();
+    });
+  }
+
+  updateEmployee(employeeId: number, employee: Employee) {
+    this.employeeService.updateEmployee(employeeId, employee).subscribe(() => {
+      this.dataSaved = true;
+      this.message = 'Employee record updated successfully!';
+      this.loadAllEmployees();
+      this.employeeIdUpdate = null;
+      this.employeeForm.reset();
+    });
+  }
+
+  loadEmployeeToEdit(employeeId: number) {
+    this.employeeService.getEmployeeById(employeeId).subscribe(employee => {
+      this.message = "";
+      this.dataSaved = false;
+      this.employeeIdUpdate = employee.employeeId;
+      this.employeeForm.patchValue(employee);
+      this.isAdding = true;
+    });
+  }
+
+  deleteEmployee(employeeId: number) {
+    if (confirm("Are you sure you want to delete this employee?")) {
+      this.employeeService.deleteEmployee(employeeId).subscribe(() => {
+        this.dataSaved = true;
+        this.message = 'Employee record deleted successfully!';
+        this.loadAllEmployees();
+        this.employeeIdUpdate = null;
+        this.employeeForm.reset();
+      });
     }
   }
 
+  resetForm() {
+    this.employeeForm.reset();
+    this.message = "";
+    this.dataSaved = false;
+  }
 
+  startAdding() {
+    this.isAdding = true;
+    this.employeeForm.reset();
+  }
 
-  deleteEmployeeById(employeeId: number): void {
-    this.employeeService.deleteEmployee(employeeId).subscribe(
-      () => this.message = 'Employee deleted successfully',
-      error => console.error('Error deleting employee', error)
-    );
+  cancelAdding() {
+    this.isAdding = false;
+    this.employeeIdUpdate = null;
+    this.employeeForm.reset();
   }
 }
+

@@ -1,77 +1,63 @@
-<div class="container" style="width:100%">
-  <form [formGroup]="departmentForm" (ngSubmit)="onFormSubmit()">
-    <div class="card">
-      <div class="card-header bg-info">
-        <h2 class="m-b-0 text-white">
-          <i class="fa fa-plus-circle" style="font-size:20px; margin:5px;"></i><small>Department Information</small>
-        </h2>
-      </div>
-      <div>
+<div class="container">
+  <h2>Department Management</h2>
 
-        <div style="width:50%">
-          <div>
-            <table>
-              <tr>
-                <td class="tbl1">
-                  <div class="demo-full-width">
-                    <input formControlName="departmentName" type="text" placeholder="Department Name" class="form-control">
-                  </div>
-                  <div>
-                    <span *ngIf="!departmentForm.get('departmentName').value && departmentForm.get('departmentName').touched"></span>
-                  </div>
-                </td>
-              </tr>
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
 
-              <tr>
-                <td class="form-check">
-                  <input class="form-check-input" type="checkbox" formControlName="isActive" name="IsActive" />
-                  <label class="form-check-label" for="IsActive">
-                    Is Active?
-                  </label>
-                </td>
-              </tr>
+  <!-- Add Department Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Department</button>
 
-              <tr>
-                <td></td>
-                <td class="content-center btn-toolbar">
-                </td>
-                <td>
-                  <p *ngIf="dataSaved" style="color:rgb(0, 128, 0);font-size:20px;font-weight:bold" Class="success" align="left">
-                    {{message}}
-                  </p>
-                </td>
-              </tr>
+  <!-- Departments List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Departments List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Department Name</th>
+          <th>Is Active</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let department of allDepartments | async">
+          <td>{{ department.departmentName }}</td>
+          <td>{{ department.isActive ? 'Yes' : 'No' }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadDepartmentToEdit(department.departmentId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteDepartment(department.departmentId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-            </table>
-
-          </div>
-          <div>
-            <button class="btn btn-primary" type="submit" [disabled]="!departmentForm.valid" style="background-color:darkblue; color:white">Submit</button>&nbsp;
-            <button class="btn btn-info" type="reset" (click)="resetForm()">Reset</button>
-          </div>
+  <!-- Department Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="departmentForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="departmentName">Department Name</label>
+        <input type="text" id="departmentName" class="form-control" formControlName="departmentName" />
+        <div *ngIf="departmentForm.get('departmentName').invalid && departmentForm.get('departmentName').touched" class="text-danger">
+          Department Name is required.
         </div>
-
-        <table class="table">
-          <tr ngclass="btn-primary">
-            <th class="tbl2">Department Name</th>
-            <th class="tbl2">Is Active?</th>
-            <th class="tbl2">Edit</th>
-            <th class="tbl2">Delete</th>
-          </tr>
-          <tr *ngFor="let department of allDepartment | async">
-            <td class="tbl2">{{department.departmentName}}</td>
-            <td class="tbl2">{{department.isActive}}</td>
-            <td class="tbl2">
-              <button type="button" class="btn btn-info" (click)="loadDepartmentToEdit(department.departmentId)">Edit</button>
-            </td>
-            <td class="tbl2">
-              <button type="button" class="btn btn-danger" (click)="deleteDepartment(department.departmentId)">Delete</button>
-            </td>
-          </tr>
-        </table>
       </div>
-    </div>
 
-  </form>
+      <div class="form-group form-check">
+        <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+        <label for="isActive" class="form-check-label">Is Active</label>
+      </div>
 
+      <button type="submit" class="btn btn-primary">
+        {{ departmentIdUpdate == null ? 'Save' : 'Update' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
 </div>

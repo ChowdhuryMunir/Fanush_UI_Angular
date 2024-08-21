@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { DepartmentServices } from './department.service';
-import { from, Observable } from 'rxjs';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { DepartmentServices } from '../department/department.service';
 import { Department } from './department.model';
 
 @Component({
@@ -13,82 +12,76 @@ import { Department } from './department.model';
 export class DepartmentComponent implements OnInit {
   dataSaved = false;
   departmentForm: any;
+  allDepartments: Observable<Department[]> = this.departmentService.getAllDepartment();
+  departmentIdUpdate: number | null = null;
+  message: string = "";
+  isAdding: boolean = false;
 
-  allDepartment: Observable<any> = this.departmentService.getAllDepartment();
-  // allCategory: Observable<Category[]>;
-  // allCategory!: Observable<Category[]>;
-  // allCategory:any;
-
-  departmentIdUpdate = null;
-  message = "";
-
-  constructor(private formBuilder: FormBuilder, private routes: Router,
-    private departmentService: DepartmentServices) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private departmentService: DepartmentServices
+  ) { }
 
   ngOnInit() {
     this.departmentForm = this.formBuilder.group({
       departmentName: ['', [Validators.required]],
-      isActive: [false],
-      books: [''] // Add this line to include the books control
+      isActive: [false]
     });
-    this.loadAllDepartment();
+    this.loadAllDepartments();
   }
 
-  loadAllDepartment() {
-    this.allDepartment = this.departmentService.getAllDepartment();
+  loadAllDepartments() {
+    this.allDepartments = this.departmentService.getAllDepartment();
   }
 
   onFormSubmit() {
     this.dataSaved = false;
     const department = this.departmentForm.value;
-    this.createDepartment(department);
+    this.createOrUpdateDepartment(department);
     this.departmentForm.reset();
+    this.isAdding = false;
   }
 
-  loadDepartmentToEdit(departmentId: any) {
+  loadDepartmentToEdit(departmentId: number) {
     this.departmentService.getDepartmentById(departmentId).subscribe(department => {
       this.message = "";
       this.dataSaved = false;
       this.departmentIdUpdate = department.departmentId;
-      this.departmentForm.get('departmentName').setValue(department['departmentName']);
-      this.departmentForm.get('isActive').setValue(department['isActive']);
-    }); 
+      this.departmentForm.patchValue(department);
+      this.isAdding = true;
+    });
   }
 
-  createDepartment(department: Department) {
+  createOrUpdateDepartment(department: Department) {
     if (this.departmentIdUpdate == null) {
       this.departmentService.createDepartment(department).subscribe(() => {
         this.dataSaved = true;
         this.message = "Record Saved Successfully.";
-        this.loadAllDepartment();
+        this.loadAllDepartments();
         this.departmentIdUpdate = null;
         this.departmentForm.reset();
-      }
-      )
-    }
-    else {
+      });
+    } else {
       department.departmentId = this.departmentIdUpdate;
       this.departmentService.updateDepartment(this.departmentIdUpdate, department).subscribe(() => {
         this.dataSaved = true;
-        this.message = "Record Update Successfully.";
-        this.loadAllDepartment();
+        this.message = "Record Updated Successfully.";
+        this.loadAllDepartments();
         this.departmentIdUpdate = null;
         this.departmentForm.reset();
-
       });
     }
   }
 
-
-  deleteDepartment(id: string) {
-    if (confirm("Are You Sure To Delete This?")) {
-      this.departmentService.deleteDepartmentById(id).subscribe(() => {
+  deleteDepartment(departmentId: number) {
+    if (confirm("Are you sure you want to delete this department?")) {
+      this.departmentService.deleteDepartmentById(departmentId.toString()).subscribe(() => {
         this.dataSaved = true;
         this.message = "Record Deleted Successfully.";
-        this.loadAllDepartment();
+        this.loadAllDepartments();
         this.departmentIdUpdate = null;
         this.departmentForm.reset();
-      })
+      });
     }
   }
 
@@ -96,6 +89,15 @@ export class DepartmentComponent implements OnInit {
     this.departmentForm.reset();
     this.message = "";
     this.dataSaved = false;
+    this.isAdding = false;
   }
 
+  startAdding() {
+    this.isAdding = true;
+  }
+
+  cancelAdding() {
+    this.isAdding = false;
+    this.departmentForm.reset();
+  }
 }

@@ -92,7 +92,6 @@
 //  }
 //}
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { JobTitleService } from './job-title.service';
@@ -109,10 +108,10 @@ export class JobTitleComponent implements OnInit {
   allJobTitles: Observable<JobTitle[]> = this.jobTitleService.getAllJobTitles();
   jobTitleIdUpdate: number | null = null;
   message: string = "";
+  isAdding: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router,
     private jobTitleService: JobTitleService
   ) { }
 
@@ -133,6 +132,7 @@ export class JobTitleComponent implements OnInit {
     const jobTitle = this.jobTitleForm.value;
     this.createOrUpdateJobTitle(jobTitle);
     this.jobTitleForm.reset();
+    this.isAdding = false;
   }
 
   loadJobTitleToEdit(jobTitleId: number) {
@@ -140,8 +140,8 @@ export class JobTitleComponent implements OnInit {
       this.message = "";
       this.dataSaved = false;
       this.jobTitleIdUpdate = jobTitle.jobTitleId;
-      this.jobTitleForm.get('jobTitleName')?.setValue(jobTitle.jobTitleName);
-      this.jobTitleForm.get('isActive')?.setValue(jobTitle.isActive);
+      this.jobTitleForm.patchValue(jobTitle);
+      this.isAdding = true;
     });
   }
 
@@ -167,7 +167,7 @@ export class JobTitleComponent implements OnInit {
   }
 
   deleteJobTitle(id: number) {
-    if (confirm("Are You Sure To Delete This?")) {
+    if (confirm("Are you sure you want to delete this job title?")) {
       this.jobTitleService.deleteJobTitleById(id).subscribe(() => {
         this.dataSaved = true;
         this.message = "Record Deleted Successfully.";
@@ -182,6 +182,15 @@ export class JobTitleComponent implements OnInit {
     this.jobTitleForm.reset();
     this.message = "";
     this.dataSaved = false;
+    this.isAdding = false;
+  }
+
+  startAdding() {
+    this.isAdding = true;
+  }
+
+  cancelAdding() {
+    this.isAdding = false;
+    this.jobTitleForm.reset();
   }
 }
-

@@ -1,0 +1,105 @@
+<div class="container">
+  <h2>Interview Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Interview Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Interview</button>
+
+  <!-- Interviews List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Interviews List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Date & Time</th>
+          <th>Location</th>
+          <th>Interviewer</th>
+          <th>Applicant</th>
+          <th>Type</th>
+          <th>Duration (mins)</th>
+          <th>Active</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let interview of allInterviews | async">
+          <td>{{ interview.dateTime | date: 'short' }}</td>
+          <td>{{ interview.location }}</td>
+          <td>{{ interview.interviewer }}</td>
+          <td>{{ interview.applicant?.applicantName }}</td>
+          <td>{{ interview.interviewType }}</td>
+          <td>{{ interview.durationMinutes }}</td>
+          <td>{{ interview.isActive ? 'Yes' : 'No' }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadInterviewToEdit(interview.interviewId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteInterview(interview.interviewId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Interview Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="interviewForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="dateTime">Date & Time</label>
+        <input type="datetime-local" id="dateTime" class="form-control" formControlName="dateTime" />
+        <div *ngIf="interviewForm.get('dateTime').invalid && interviewForm.get('dateTime').touched" class="text-danger">
+          Date & Time is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" class="form-control" formControlName="location" />
+      </div>
+
+      <div class="form-group">
+        <label for="interviewer">Interviewer</label>
+        <input type="text" id="interviewer" class="form-control" formControlName="interviewer" />
+      </div>
+
+      <div class="form-group">
+        <label for="applicantId">Applicant ID</label>
+        <input type="number" id="applicantId" class="form-control" formControlName="applicantId" />
+        <div *ngIf="interviewForm.get('applicantId').invalid && interviewForm.get('applicantId').touched" class="text-danger">
+          Applicant ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="interviewType">Interview Type</label>
+        <select id="interviewType" class="form-control" formControlName="interviewType">
+          <option value="PreliminaryTest">Preliminary Test</option>
+          <option value="Written">Written</option>
+          <option value="OralTest">Oral Test</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="durationMinutes">Duration (minutes)</label>
+        <input type="number" id="durationMinutes" class="form-control" formControlName="durationMinutes" />
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+        <label for="isActive" class="form-check-label">Is Active</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        {{ interviewIdUpdate == null ? 'Save' : 'Update' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>
