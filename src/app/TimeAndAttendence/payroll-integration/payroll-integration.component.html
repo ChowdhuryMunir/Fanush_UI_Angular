@@ -1,0 +1,144 @@
+<div class="container">
+  <h2>Payroll Integration Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Payroll Integration Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Payroll Integration</button>
+
+  <!-- Payroll Integrations List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Payroll Integrations List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Payroll System ID</th>
+          <th>Amount</th>
+          <th>Integration Date</th>
+          <th>Integration Type</th>
+          <th>Transaction ID</th>
+          <th>Is Active</th>
+          <th>Pay Period Start Date</th>
+          <th>Pay Period End Date</th>
+          <th>Pay Frequency</th>
+          <th>Deductions</th>
+          <th>Net Pay</th>
+          <th>Tax Amount</th>
+          <th>Gross Pay</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let payrollIntegration of allPayrollIntegrations | async">
+          <td>{{ payrollIntegration.employeeId }}</td>
+          <td>{{ payrollIntegration.payrollSystemId }}</td>
+          <td>{{ payrollIntegration.amount | currency }}</td>
+          <td>{{ payrollIntegration.integrationDate | date }}</td>
+          <td>{{ payrollIntegration.integrationType }}</td>
+          <td>{{ payrollIntegration.transactionId }}</td>
+          <td>{{ payrollIntegration.isActive ? 'Yes' : 'No' }}</td>
+          <td>{{ payrollIntegration.payPeriodStartDate | date }}</td>
+          <td>{{ payrollIntegration.payPeriodEndDate | date }}</td>
+          <td>{{ payrollIntegration.payFrequency }}</td>
+          <td>{{ payrollIntegration.deductions | currency }}</td>
+          <td>{{ payrollIntegration.netPay | currency }}</td>
+          <td>{{ payrollIntegration.taxAmount | currency }}</td>
+          <td>{{ payrollIntegration.grossPay | currency }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadPayrollIntegrationToEdit(payrollIntegration.payrollIntegrationId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deletePayrollIntegration(payrollIntegration.payrollIntegrationId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Payroll Integration Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="payrollIntegrationForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" class="form-control" formControlName="employeeId" />
+        <div *ngIf="payrollIntegrationForm.get('employeeId').invalid && payrollIntegrationForm.get('employeeId').touched" class="text-danger">
+          Employee ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="payrollSystemId">Payroll System ID</label>
+        <input type="number" id="payrollSystemId" class="form-control" formControlName="payrollSystemId" />
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" step="0.01" id="amount" class="form-control" formControlName="amount" />
+      </div>
+
+      <div class="form-group">
+        <label for="integrationDate">Integration Date</label>
+        <input type="date" id="integrationDate" class="form-control" formControlName="integrationDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="integrationType">Integration Type</label>
+        <input type="text" id="integrationType" class="form-control" formControlName="integrationType" />
+      </div>
+
+      <div class="form-group">
+        <label for="transactionId">Transaction ID</label>
+        <input type="text" id="transactionId" class="form-control" formControlName="transactionId" />
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+        <label for="isActive" class="form-check-label">Is Active</label>
+      </div>
+
+      <div class="form-group">
+        <label for="payPeriodStartDate">Pay Period Start Date</label>
+        <input type="date" id="payPeriodStartDate" class="form-control" formControlName="payPeriodStartDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="payPeriodEndDate">Pay Period End Date</label>
+        <input type="date" id="payPeriodEndDate" class="form-control" formControlName="payPeriodEndDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="payFrequency">Pay Frequency</label>
+        <input type="text" id="payFrequency" class="form-control" formControlName="payFrequency" />
+      </div>
+
+      <div class="form-group">
+        <label for="deductions">Deductions</label>
+        <input type="number" step="0.01" id="deductions" class="form-control" formControlName="deductions" />
+      </div>
+
+      <div class="form-group">
+        <label for="netPay">Net Pay</label>
+        <input type="number" step="0.01" id="netPay" class="form-control" formControlName="netPay" />
+      </div>
+
+      <div class="form-group">
+        <label for="taxAmount">Tax Amount</label>
+        <input type="number" step="0.01" id="taxAmount" class="form-control" formControlName="taxAmount" />
+      </div>
+
+      <div class="form-group">
+        <label for="grossPay">Gross Pay</label>
+        <input type="number" step="0.01" id="grossPay" class="form-control" formControlName="grossPay" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">{{ payrollIntegrationIdUpdate == null ? 'Save' : 'Update' }}</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>

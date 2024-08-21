@@ -1,1 +1,139 @@
-<p>applicant works!</p>
+<div class="container">
+  <h2>Applicant Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Applicant Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Applicant</button>
+
+  <!-- Applicant List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Applicants List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>City</th>
+          <th>Status</th>
+          <th>Applied Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let applicant of allApplicants | async">
+          <td>{{ applicant.applicantName }}</td>
+          <td>{{ applicant.email }}</td>
+          <td>{{ applicant.phoneNumber }}</td>
+          <td>{{ applicant.city }}</td>
+          <td>{{ applicant.status }}</td>
+          <td>{{ applicant.appliedDate | date }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadApplicantToEdit(applicant.applicantId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteApplicant(applicant.applicantId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Applicant Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="applicantForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="applicantName">Name</label>
+        <input type="text" id="applicantName" class="form-control" formControlName="applicantName" />
+        <div *ngIf="applicantForm.get('applicantName').invalid && applicantForm.get('applicantName').touched" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" formControlName="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone</label>
+        <input type="tel" id="phoneNumber" class="form-control" formControlName="phoneNumber" />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" class="form-control" formControlName="address" />
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" class="form-control" formControlName="city" />
+      </div>
+
+      <div class="form-group">
+        <label for="zipCode">Zip Code</label>
+        <input type="text" id="zipCode" class="form-control" formControlName="zipCode" />
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" class="form-control" formControlName="country" />
+      </div>
+
+      <div class="form-group">
+        <label for="linkedinProfileUrl">LinkedIn Profile URL</label>
+        <input type="url" id="linkedinProfileUrl" class="form-control" formControlName="linkedinProfileUrl" />
+      </div>
+
+      <div class="form-group">
+        <label for="resumeUrl">Resume URL</label>
+        <input type="url" id="resumeUrl" class="form-control" formControlName="resumeUrl" />
+      </div>
+
+      <div class="form-group">
+        <label for="expectedSalary">Expected Salary</label>
+        <input type="number" id="expectedSalary" class="form-control" formControlName="expectedSalary" />
+      </div>
+
+      <div class="form-group">
+        <label for="languages">Languages</label>
+        <input type="text" id="languages" class="form-control" formControlName="languages" />
+      </div>
+
+      <div class="form-group">
+        <label for="skills">Skills</label>
+        <input type="text" id="skills" class="form-control" formControlName="skills" />
+      </div>
+
+      <div class="form-group">
+        <label for="references">References</label>
+        <input type="text" id="references" class="form-control" formControlName="references" />
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" class="form-control" formControlName="status">
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="appliedDate">Applied Date</label>
+        <input type="date" id="appliedDate" class="form-control" formControlName="appliedDate" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        {{ applicantIdUpdate == null ? 'Save' : 'Update' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>

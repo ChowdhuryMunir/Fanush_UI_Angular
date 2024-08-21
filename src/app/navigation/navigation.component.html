@@ -1,3 +1,63 @@
+<!--<div class="container-fluid">
+  <div class="row">-->
+<!-- Sidebar -->
+<!--<nav id="sidebar" class="bg-dark text-white vh-100">
+  <div class="sidebar-header">
+    <h3>Employee Management</h3>
+    <ul class="list-unstyled components">
+      <li><a routerLink="/department" routerLinkActive="active">Departments</a></li>
+      <li><a routerLink="/job-title" routerLinkActive="active">Job Titles</a></li>
+      <li><a routerLink="/employee-lifecycle" routerLinkActive="active">Employee Lifecycle</a></li>
+      <li><a routerLink="/employee-data-import-export" routerLinkActive="active">Data Import/Export</a></li>
+      <li><a routerLink="/employee" routerLinkActive="active">Employees</a></li>
+    </ul>
+
+    <h3>Recruitment Management</h3>
+    <ul class="list-unstyled components">
+      <li><a routerLink="/job-posting" routerLinkActive="active">Job Posting</a></li>
+      <li><a routerLink="/interview" routerLinkActive="active">Interview</a></li>
+      <li><a routerLink="/applicant" routerLinkActive="active">Applicant</a></li>
+      <li><a routerLink="/WorkExperience" routerLinkActive="active">Work Experience</a></li>
+      <li><a routerLink="/Education" routerLinkActive="active">Education</a></li>
+    </ul>
+
+    <h3>Payroll Management</h3>
+    <ul class="list-unstyled components">
+      <li><a routerLink="/payroll-calculation" routerLinkActive="active">Payroll Calculation</a></li>
+    </ul>
+
+    <h3>Time and Attendance</h3>
+    <ul class="list-unstyled components">
+      <li><a routerLink="/absence-report" routerLinkActive="active">Absence Report</a></li>
+      <li><a routerLink="/leave" routerLinkActive="active">Leave</a></li>
+      <li><a routerLink="/overtime" routerLinkActive="active">Overtime</a></li>
+      <li><a routerLink="/clock-in-out" routerLinkActive="active">Clock In/Out</a></li>
+      <li><a routerLink="/payroll-integration" routerLinkActive="active">Payroll Integration</a></li>
+    </ul>
+
+    <h3>Performance Management</h3>
+    <ul class="list-unstyled components">
+      <li><a routerLink="/development-plan" routerLinkActive="active">Development Plan</a></li>
+      <li><a routerLink="/goal" routerLinkActive="active">Goal</a></li>
+      <li><a routerLink="/performance-report" routerLinkActive="active">Performance Report</a></li>
+      <li><a routerLink="/performance-review" routerLinkActive="active">Performance Review</a></li>
+    </ul>
+  </div>
+</nav>-->
+<!-- Content Area -->
+<!--<div id="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button id="sidebarCollapse" class="btn btn-dark">
+          <i class="fas fa-bars"></i>
+          <a routerLink="/HomePage" routerLinkActive="active">Home</a>
+        </button>
+      </nav>
+      <div class="container mt-4">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>-->
 <div class="container-fluid">
   <div class="row">
     <!-- Sidebar -->
@@ -17,24 +77,45 @@
           <li><a routerLink="/job-posting" routerLinkActive="active">Job Posting</a></li>
           <li><a routerLink="/interview" routerLinkActive="active">Interview</a></li>
           <li><a routerLink="/applicant" routerLinkActive="active">Applicant</a></li>
-          <li><a routerLink="/WorkExperience" routerLinkActive="active">Work Experience</a></li>
-          <li><a routerLink="/Education" routerLinkActive="active">Education</a></li>
+        </ul>
+
+        <h3>Payroll Management</h3>
+        <ul class="list-unstyled components">
+          <li><a routerLink="/payroll-calculation" routerLinkActive="active">Payroll Calculation</a></li>
+        </ul>
+
+        <h3>Time and Attendance</h3>
+        <ul class="list-unstyled components">
+          <li><a routerLink="/absence-report" routerLinkActive="active">Absence Report</a></li>
+          <li><a routerLink="/leave" routerLinkActive="active">Leave</a></li>
+          <li><a routerLink="/overtime" routerLinkActive="active">Overtime</a></li>
+          <li><a routerLink="/clock-in-out" routerLinkActive="active">Clock In/Out</a></li>
+          <li><a routerLink="/payroll-integration" routerLinkActive="active">Payroll Integration</a></li>
+        </ul>
+
+        <h3>Performance Management</h3>
+        <ul class="list-unstyled components">
+          <li><a routerLink="/development-plan" routerLinkActive="active">Development Plan</a></li>
+          <li><a routerLink="/goal" routerLinkActive="active">Goal</a></li>
+          <li><a routerLink="/performance-report" routerLinkActive="active">Performance Report</a></li>
+          <li><a routerLink="/performance-review" routerLinkActive="active">Performance Review</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- Content Area -->
     <div id="content">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button id="sidebarCollapse" class="btn btn-dark">
-              <i class="fas fa-bars"></i>
-              <a routerLink="/HomePage" routerLinkActive="active">Home</a>
-            </button>
-          </nav>
-          <div class="container mt-4">
-            <router-outlet></router-outlet>
-          </div>
-        </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button id="sidebarCollapse" class="btn btn-dark">
+          <i class="fas fa-bars"></i>
+          <a routerLink="/HomePage" routerLinkActive="active">Home</a>
+        </button>
+      </nav>
+      <div class="container mt-4">
+        <router-outlet></router-outlet>
       </div>
     </div>
-    
+  </div>
+</div>
+
+

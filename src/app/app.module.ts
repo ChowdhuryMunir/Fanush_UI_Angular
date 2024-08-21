@@ -58,7 +58,28 @@ import { ApplicantComponent } from './RecruitmentManagement/applicant/applicant.
 import { InterviewComponent } from './RecruitmentManagement/interview/interview.component';
 import { JobPostingComponent } from './RecruitmentManagement/job-posting/job-posting.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EnrollmentComponent } from './BenefitsAdministration/enrollment/enrollment.component';
+import { AbsenceReportComponent } from './TimeAndAttendence/absence-report/absence-report.component';
+import { AbsenceReportService } from './TimeAndAttendence/absence-report/absence-report.service';
+
+import { ClockInOutService } from './TimeAndAttendence/clock-in-out/clock-in-out.service';
+import { ClockInOutComponent } from './TimeAndAttendence/clock-in-out/clock-in-out.component';
+import { LeaveService } from './TimeAndAttendence/leave/leave.service';
+import { LeaveComponent } from './TimeAndAttendence/leave/leave.component';
+import { OvertimeComponent } from './TimeAndAttendence/overtime/overtime.component';
+import { OvertimeService } from './TimeAndAttendence/overtime/overtime.service';
+import { PayrollIntegrationComponent } from './TimeAndAttendence/payroll-integration/payroll-integration.component';
+import { PayrollIntegrationService } from './TimeAndAttendence/payroll-integration/payroll-integration.service';
+import { InterviewService } from './RecruitmentManagement/interview/interview.service';
+import { DevelopmentPlanComponent } from './PerformenceManagement/development-plan/development-plan.component';
+import { GoalComponent } from './PerformenceManagement/goal/goal.component';
+import { PerformanceReportComponent } from './PerformenceManagement/performance-report/performance-report.component';
+import { PerformanceReviewComponent } from './PerformenceManagement/performance-review/performance-review.component';
+import { DevelopmentPlanService } from './PerformenceManagement/development-plan/development-plan.service';
+import { GoalService } from './PerformenceManagement/goal/goal.service';
+import { PerformanceReportService } from './PerformenceManagement/performance-report/performance-report.service';
+import { PerformanceReviewService } from './PerformenceManagement/performance-review/performance-review.service';
+
+
 
 @NgModule({
   declarations: [
@@ -69,11 +90,21 @@ import { EnrollmentComponent } from './BenefitsAdministration/enrollment/enrollm
     EmployeeComponent,
     EmployeeLifecycleComponent,
     JobTitleComponent,
+AbsenceReportComponent,
     EmployeeDataImportExportComponent,
     ApplicantComponent,
     InterviewComponent,
+    ClockInOutComponent,
     JobPostingComponent,
-    EnrollmentComponent,
+    LeaveComponent,
+    OvertimeComponent,
+    InterviewComponent,
+    PayrollIntegrationComponent,
+    DevelopmentPlanComponent,
+    GoalComponent,
+    PerformanceReportComponent,
+    PerformanceReviewComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -86,9 +117,19 @@ import { EnrollmentComponent } from './BenefitsAdministration/enrollment/enrollm
   providers: [
     DepartmentServices,
     JobTitleService,
+    AbsenceReportService,
+    ClockInOutService,
+    LeaveService,
     EmployeeLifecycleService,
     EmployeeDataImportExportService,
     EmployeeService,
+    OvertimeService,
+    PayrollIntegrationService,
+    InterviewService,
+    DevelopmentPlanService,
+    GoalService,
+    PerformanceReportService,
+    PerformanceReviewService,
     // Add other services here if needed
   ],
   bootstrap: [AppComponent]

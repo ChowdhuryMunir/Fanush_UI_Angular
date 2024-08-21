@@ -1,0 +1,137 @@
+<div class="container">
+  <h2>Leave Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Leave Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Leave</button>
+
+  <!-- Leaves List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Leave List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Leave Type</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Status</th>
+          <th>Reason</th>
+          <th>Requested By</th>
+          <th>Approval Date</th>
+          <th>Approver</th>
+          <th>Approval Comments</th>
+          <th>Is Active</th>
+          <th>Is Paid Leave</th>
+          <th>Leave Category</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let leave of allLeaves | async">
+          <td>{{ leave.employeeId }}</td>
+          <td>{{ leave.leaveType }}</td>
+          <td>{{ leave.startDate | date }}</td>
+          <td>{{ leave.endDate | date }}</td>
+          <td>{{ leave.status }}</td>
+          <td>{{ leave.reason }}</td>
+          <td>{{ leave.requestedBy }}</td>
+          <td>{{ leave.approvalDate ? (leave.approvalDate | date) : 'N/A' }}</td>
+          <td>{{ leave.approver }}</td>
+          <td>{{ leave.approvalComments }}</td>
+          <td>{{ leave.isActive ? 'Yes' : 'No' }}</td>
+          <td>{{ leave.isPaidLeave ? 'Yes' : 'No' }}</td>
+          <td>{{ leave.leaveCategory }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadLeaveToEdit(leave.leaveId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteLeave(leave.leaveId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Leave Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="leaveForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" class="form-control" formControlName="employeeId" />
+        <div *ngIf="leaveForm.get('employeeId').invalid && leaveForm.get('employeeId').touched" class="text-danger">
+          Employee ID is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="leaveType">Leave Type</label>
+        <input type="text" id="leaveType" class="form-control" formControlName="leaveType" />
+      </div>
+
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" class="form-control" formControlName="startDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate" class="form-control" formControlName="endDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" id="status" class="form-control" formControlName="status" />
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason</label>
+        <textarea id="reason" class="form-control" formControlName="reason"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="requestedBy">Requested By</label>
+        <input type="text" id="requestedBy" class="form-control" formControlName="requestedBy" />
+      </div>
+
+      <div class="form-group">
+        <label for="approvalDate">Approval Date</label>
+        <input type="date" id="approvalDate" class="form-control" formControlName="approvalDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="approver">Approver</label>
+        <input type="text" id="approver" class="form-control" formControlName="approver" />
+      </div>
+
+      <div class="form-group">
+        <label for="approvalComments">Approval Comments</label>
+        <textarea id="approvalComments" class="form-control" formControlName="approvalComments"></textarea>
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+        <label for="isActive" class="form-check-label">Is Active</label>
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="isPaidLeave" class="form-check-input" formControlName="isPaidLeave" />
+        <label for="isPaidLeave" class="form-check-label">Is Paid Leave</label>
+      </div>
+
+      <div class="form-group">
+        <label for="leaveCategory">Leave Category</label>
+        <input type="text" id="leaveCategory" class="form-control" formControlName="leaveCategory" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>

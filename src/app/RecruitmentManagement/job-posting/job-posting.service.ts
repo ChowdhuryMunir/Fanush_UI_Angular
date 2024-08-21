@@ -22,10 +22,12 @@ export class JobPostingService {
 
   constructor(private _http: HttpClient) { }
 
+  //getAllJobPostings(): Observable<JobPosting[]> {
+  //  return this._http.get<JobPosting[]>(`${this.url}`);
+  //}
   getAllJobPostings(): Observable<JobPosting[]> {
-    return this._http.get<JobPosting[]>(`${this.url}`);
+    return this._http.get<JobPosting[]>(`${this.url}/GetAllJobPosting`);
   }
-
   getJobPostingById(id: number): Observable<JobPosting> {
     return this._http.get<JobPosting>(`${this.url}/${id}`);
   }

@@ -1,0 +1,155 @@
+<div class="container">
+  <h2>Overtime Management</h2>
+
+  <!-- Success or error message -->
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <!-- Add Overtime Button -->
+  <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Overtime</button>
+
+  <!-- Overtimes List -->
+  <div *ngIf="!isAdding">
+    <h3 class="mt-4">Overtimes List</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Date</th>
+          <th>Hours</th>
+          <th>Is Active</th>
+          <th>Overtime Type</th>
+          <th>Approval Status</th>
+          <th>Approved By</th>
+          <th>Approval Date</th>
+          <th>Reason</th>
+          <th>Attachment URL</th>
+          <th>Created Date</th>
+          <th>Last Modified Date</th>
+          <th>Created By</th>
+          <th>Last Modified By</th>
+          <th>Department</th>
+          <th>Project</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let overtime of allOvertimes | async">
+          <td>{{ overtime.employeeId }}</td>
+          <td>{{ overtime.date | date }}</td>
+          <td>{{ overtime.hours }}</td>
+          <td>{{ overtime.isActive ? 'Yes' : 'No' }}</td>
+          <td>{{ overtime.overtimeType }}</td>
+          <td>{{ overtime.approvalStatus }}</td>
+          <td>{{ overtime.approvedBy }}</td>
+          <td>{{ overtime.approvalDate | date }}</td>
+          <td>{{ overtime.reason }}</td>
+          <td>{{ overtime.attachmentUrl }}</td>
+          <td>{{ overtime.createdDate | date }}</td>
+          <td>{{ overtime.lastModifiedDate | date }}</td>
+          <td>{{ overtime.createdBy }}</td>
+          <td>{{ overtime.lastModifiedBy }}</td>
+          <td>{{ overtime.department }}</td>
+          <td>{{ overtime.project }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="loadOvertimeToEdit(overtime.overtimeId)">
+              Edit
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteOvertime(overtime.overtimeId)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Overtime Form -->
+  <div *ngIf="isAdding">
+    <form [formGroup]="overtimeForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" class="form-control" formControlName="employeeId" />
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" class="form-control" formControlName="date" />
+      </div>
+
+      <div class="form-group">
+        <label for="hours">Hours</label>
+        <input type="number" id="hours" class="form-control" formControlName="hours" />
+      </div>
+
+      <div class="form-group">
+        <label for="isActive">Is Active</label>
+        <input type="checkbox" id="isActive" formControlName="isActive" />
+      </div>
+
+      <div class="form-group">
+        <label for="overtimeType">Overtime Type</label>
+        <input type="text" id="overtimeType" class="form-control" formControlName="overtimeType" />
+      </div>
+
+      <div class="form-group">
+        <label for="approvalStatus">Approval Status</label>
+        <input type="text" id="approvalStatus" class="form-control" formControlName="approvalStatus" />
+      </div>
+
+      <div class="form-group">
+        <label for="approvedBy">Approved By</label>
+        <input type="text" id="approvedBy" class="form-control" formControlName="approvedBy" />
+      </div>
+
+      <div class="form-group">
+        <label for="approvalDate">Approval Date</label>
+        <input type="date" id="approvalDate" class="form-control" formControlName="approvalDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason</label>
+        <textarea id="reason" class="form-control" formControlName="reason"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="attachmentUrl">Attachment URL</label>
+        <input type="text" id="attachmentUrl" class="form-control" formControlName="attachmentUrl" />
+      </div>
+
+      <div class="form-group">
+        <label for="createdDate">Created Date</label>
+        <input type="date" id="createdDate" class="form-control" formControlName="createdDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="lastModifiedDate">Last Modified Date</label>
+        <input type="date" id="lastModifiedDate" class="form-control" formControlName="lastModifiedDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="createdBy">Created By</label>
+        <input type="text" id="createdBy" class="form-control" formControlName="createdBy" />
+      </div>
+
+      <div class="form-group">
+        <label for="lastModifiedBy">Last Modified By</label>
+        <input type="text" id="lastModifiedBy" class="form-control" formControlName="lastModifiedBy" />
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input type="text" id="department" class="form-control" formControlName="department" />
+      </div>
+
+      <div class="form-group">
+        <label for="project">Project</label>
+        <input type="text" id="project" class="form-control" formControlName="project" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+    </form>
+  </div>
+</div>
