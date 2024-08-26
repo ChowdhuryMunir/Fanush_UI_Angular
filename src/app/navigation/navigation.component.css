@@ -56,7 +56,11 @@
     width: 100%;
   }
 }*/
+<<<<<<< HEAD
 /* Sidebar *//*scrolling*/
+=======
+/* Sidebar */
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 #sidebar {
   width: 20%;
   overflow-y: auto; /* Allows scrolling if content overflows */
@@ -131,13 +135,21 @@
     width: 100%;
     position: relative;
     height: auto;
+<<<<<<< HEAD
     overflow-y: auto; /* Adds scrolling for smaller screens*/ 
+=======
+    overflow-y: auto; /* Adds scrolling for smaller screens */
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   }
 
   #content {
     margin-left: 0;
     width: 100%;
+<<<<<<< HEAD
     padding: 10px; /* Ensure padding on smaller screens*/ 
+=======
+    padding: 10px; /* Ensure padding on smaller screens */
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   }
 
   .sidebar-header h3 {

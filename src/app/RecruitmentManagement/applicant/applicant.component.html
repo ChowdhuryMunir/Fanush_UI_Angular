@@ -9,7 +9,11 @@
   <!-- Add Applicant Button -->
   <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Applicant</button>
 
+<<<<<<< HEAD
   <!-- Applicants List -->
+=======
+  <!-- Applicant List -->
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   <div *ngIf="!isAdding">
     <h3 class="mt-4">Applicants List</h3>
     <table class="table table-striped">
@@ -17,9 +21,16 @@
         <tr>
           <th>Name</th>
           <th>Email</th>
+<<<<<<< HEAD
           <th>Status</th>
           <th>Applied Date</th>
           <th>Phone Number</th>
+=======
+          <th>Phone</th>
+          <th>City</th>
+          <th>Status</th>
+          <th>Applied Date</th>
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
           <th>Actions</th>
         </tr>
       </thead>
@@ -27,9 +38,16 @@
         <tr *ngFor="let applicant of allApplicants | async">
           <td>{{ applicant.applicantName }}</td>
           <td>{{ applicant.email }}</td>
+<<<<<<< HEAD
           <td>{{ applicant.status }}</td>
           <td>{{ applicant.appliedDate | date }}</td>
           <td>{{ applicant.phoneNumber }}</td>
+=======
+          <td>{{ applicant.phoneNumber }}</td>
+          <td>{{ applicant.city }}</td>
+          <td>{{ applicant.status }}</td>
+          <td>{{ applicant.appliedDate | date }}</td>
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
           <td>
             <button class="btn btn-warning btn-sm" (click)="loadApplicantToEdit(applicant.applicantId)">
               Edit
@@ -57,6 +75,7 @@
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" id="email" class="form-control" formControlName="email" />
+<<<<<<< HEAD
         <div *ngIf="applicantForm.get('email').invalid && applicantForm.get('email').touched" class="text-danger">
           Valid email is required.
         </div>
@@ -89,6 +108,13 @@
       <div class="form-group">
         <label for="linkedinProfileUrl">LinkedIn Profile URL</label>
         <input type="text" id="linkedinProfileUrl" class="form-control" formControlName="linkedinProfileUrl" />
+=======
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone</label>
+        <input type="tel" id="phoneNumber" class="form-control" formControlName="phoneNumber" />
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
       </div>
 
       <div class="form-group">
@@ -112,8 +138,23 @@
       </div>
 
       <div class="form-group">
+<<<<<<< HEAD
         <label for="expectedSalary">Expected Salary</label>
         <input type="text" id="expectedSalary" class="form-control" formControlName="expectedSalary" />
+=======
+        <label for="linkedinProfileUrl">LinkedIn Profile URL</label>
+        <input type="url" id="linkedinProfileUrl" class="form-control" formControlName="linkedinProfileUrl" />
+      </div>
+
+      <div class="form-group">
+        <label for="resumeUrl">Resume URL</label>
+        <input type="url" id="resumeUrl" class="form-control" formControlName="resumeUrl" />
+      </div>
+
+      <div class="form-group">
+        <label for="expectedSalary">Expected Salary</label>
+        <input type="number" id="expectedSalary" class="form-control" formControlName="expectedSalary" />
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
       </div>
 
       <div class="form-group">
@@ -131,6 +172,7 @@
         <input type="text" id="references" class="form-control" formControlName="references" />
       </div>
 
+<<<<<<< HEAD
       <div formArrayName="educations">
         <h3>Education</h3>
         <button type="button" class="btn btn-secondary mb-2" (click)="addEducation()">Add Education</button>
@@ -179,6 +221,26 @@
 
       <button type="submit" class="btn btn-primary">{{ applicantIdUpdate ? 'Update' : 'Save' }}</button>
       <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+=======
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" class="form-control" formControlName="status">
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="appliedDate">Applied Date</label>
+        <input type="date" id="appliedDate" class="form-control" formControlName="appliedDate" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        {{ applicantIdUpdate == null ? 'Save' : 'Update' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="cancelAdding()">Cancel</button>
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
     </form>
   </div>
 </div>

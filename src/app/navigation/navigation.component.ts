@@ -112,10 +112,13 @@ import { PayrollIntegration } from '../TimeAndAttendence/payroll-integration/pay
 import { Applicant } from '../RecruitmentManagement/applicant/applicant.model';
 import { DevelopmentPlan } from '../PerformenceManagement/development-plan/development-plan.model';
 import { Goal } from '../PerformenceManagement/goal/goal.model';
+<<<<<<< HEAD
 //add
 import { PayrollCalculation  } from '../PayrollManagement/payroll-calculation/payroll-calculation.model';
 import { PayrollCalculationService } from '../PayrollManagement/payroll-calculation/payroll-calculation.service';
 //import { Data } from '@syncfusion/ej2-angular-grids';
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
 
 
@@ -139,6 +142,7 @@ export class NavigationComponent implements OnInit {
   overtimes!: Overtime[]; // Add property for overtime data
   payrollIntegrations!: PayrollIntegration[]; // Add property for payroll integration data
 
+<<<<<<< HEAD
    applicantData!: Applicant[]; // Define the correct type if available
    developmentPlans!: DevelopmentPlan[]; // Define the correct type if available
    goals!: Goal[]; // Define the correct type if available
@@ -148,6 +152,14 @@ export class NavigationComponent implements OnInit {
   PayrollCalculation!: any[];
    
 
+=======
+  applicantData!: Applicant[]; // Define the correct type if available
+   developmentPlans!: DevelopmentPlan[]; // Define the correct type if available
+  goals!: Goal[]; // Define the correct type if available
+   performanceReports!: any[]; // Define the correct type if available
+   performanceReviews!: any[]; // Define the correct type if available
+
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   constructor(
     private departmentService: DepartmentServices,
     private jobTitleService: JobTitleService,
@@ -166,9 +178,13 @@ export class NavigationComponent implements OnInit {
     private developmentPlanService: DevelopmentPlanService, // Service for DevelopmentPlanComponent
     private goalService: GoalService, // Service for GoalComponent
     private performanceReportService: PerformanceReportService, // Service for PerformanceReportComponent
+<<<<<<< HEAD
     private performanceReviewService: PerformanceReviewService,
 
     private payrollCalculationService: PayrollCalculationService
+=======
+    private performanceReviewService: PerformanceReviewService
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
 
   ) { }
@@ -230,12 +246,15 @@ export class NavigationComponent implements OnInit {
      this.performanceReviewService.getAllPerformanceReviews().subscribe(data => {
        this.performanceReviews = data;
      });
+<<<<<<< HEAD
 
 
     this.payrollCalculationService.getAllPayrollCalculations().subscribe(data => {
       this.PayrollCalculation = data
     })
 
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   }
 
   toggleSidebar(): void {

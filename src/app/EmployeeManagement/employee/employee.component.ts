@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee.model';
 
@@ -19,9 +20,17 @@ export class EmployeeComponent implements OnInit {
   isAdding: boolean = false;
 
   constructor(
+<<<<<<< HEAD
     private formBuilder: FormBuilder,
     private router: Router,
     private employeeService: EmployeeService
+=======
+    private fb: FormBuilder,
+    private routes: Router,
+    private employeeService: EmployeeService,
+    private jobTitleService: JobTitleService, // Add this line
+    private departmentService: DepartmentServices // Add this line
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   ) { }
 
   ngOnInit() {

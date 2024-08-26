@@ -68,7 +68,10 @@ import { DevelopmentPlanComponent } from './PerformenceManagement/development-pl
 import { GoalComponent } from './PerformenceManagement/goal/goal.component';
 import { PerformanceReportComponent } from './PerformenceManagement/performance-report/performance-report.component';
 import { PerformanceReviewComponent } from './PerformenceManagement/performance-review/performance-review.component';
+<<<<<<< HEAD
 import { PayrollCalculationComponent } from './PayrollManagement/payroll-calculation/payroll-calculation.component';
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
 const routes: Routes = [
   { path: '', redirectTo: '/HomePage', pathMatch: 'full' },
@@ -92,7 +95,10 @@ const routes: Routes = [
   { path: 'performance-report', component: PerformanceReportComponent },
   { path: 'performance-review', component: PerformanceReviewComponent },
   { path: 'applicant', component: ApplicantComponent },
+<<<<<<< HEAD
   { path: 'payroll-calculation', component: PayrollCalculationComponent },
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
   // Fallback route for undefined paths
   { path: '**', redirectTo: '/HomePage' }

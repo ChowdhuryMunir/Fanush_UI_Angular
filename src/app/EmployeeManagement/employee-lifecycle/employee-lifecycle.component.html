@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 <div class="container">
   <h2>Employee Lifecycle Management</h2>
 
@@ -6,8 +10,53 @@
     {{ message }}
   </div>
 
+<<<<<<< HEAD
   <!-- Add Employee Lifecycle Button -->
   <button *ngIf="!isAdding" class="btn btn-primary mb-3" (click)="startAdding()">Add Employee Lifecycle</button>
+=======
+  <!-- Employee Lifecycle Form -->
+  <form [formGroup]="employeeLifecycleForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label for="employeeId">Employee Name</label>
+      <select id="employeeId" class="form-control" formControlName="employeeId" (change)="onEmployeeIdChange()">
+        <option value="">Select Employee</option>
+        <option *ngFor="let employee of allEmployees" [value]="employee.employeeId">
+          {{ employee.firstName }} {{ employee.lastName }}
+        </option>
+      </select>
+      <div *ngIf="employeeLifecycleForm.get('employeeId').invalid && employeeLifecycleForm.get('employeeId').touched" class="text-danger">
+        Employee Name is required.
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="actionType">Action Type</label>
+      <input type="text" id="actionType" class="form-control" formControlName="actionType" />
+      <div *ngIf="employeeLifecycleForm.get('actionType').invalid && employeeLifecycleForm.get('actionType').touched" class="text-danger">
+        Action Type is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="actionDate">Action Date</label>
+      <input type="date" id="actionDate" class="form-control" formControlName="actionDate" />
+      <div *ngIf="employeeLifecycleForm.get('actionDate').invalid && employeeLifecycleForm.get('actionDate').touched" class="text-danger">
+        Action Date is required.
+      </div>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" id="isActive" class="form-check-input" formControlName="isActive" />
+      <label for="isActive" class="form-check-label">Is Active</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      {{ lifecycleIdUpdate == null ? 'Save' : 'Update' }}
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+  </form>
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
   <!-- Employee Lifecycles List -->
   <div *ngIf="!isAdding">

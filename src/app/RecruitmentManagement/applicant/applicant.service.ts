@@ -2,7 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment.development';
+<<<<<<< HEAD
 import { Applicant } from './applicant.model';
+=======
+import { Applicant } from './applicant.model'; // Make sure this path is correct
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
 @Injectable({
   providedIn: 'root'

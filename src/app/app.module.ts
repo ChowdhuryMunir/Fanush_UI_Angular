@@ -78,8 +78,11 @@ import { DevelopmentPlanService } from './PerformenceManagement/development-plan
 import { GoalService } from './PerformenceManagement/goal/goal.service';
 import { PerformanceReportService } from './PerformenceManagement/performance-report/performance-report.service';
 import { PerformanceReviewService } from './PerformenceManagement/performance-review/performance-review.service';
+<<<<<<< HEAD
 import { PayrollCalculationComponent } from './PayrollManagement/payroll-calculation/payroll-calculation.component';
 import { PayrollCalculationService } from './PayrollManagement/payroll-calculation/payroll-calculation.service';
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
 
 
@@ -92,7 +95,11 @@ import { PayrollCalculationService } from './PayrollManagement/payroll-calculati
     EmployeeComponent,
     EmployeeLifecycleComponent,
     JobTitleComponent,
+<<<<<<< HEAD
     AbsenceReportComponent,
+=======
+AbsenceReportComponent,
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
     EmployeeDataImportExportComponent,
     ApplicantComponent,
     InterviewComponent,
@@ -106,7 +113,10 @@ import { PayrollCalculationService } from './PayrollManagement/payroll-calculati
     GoalComponent,
     PerformanceReportComponent,
     PerformanceReviewComponent,
+<<<<<<< HEAD
     PayrollCalculationComponent,
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
  
   ],
   imports: [
@@ -133,7 +143,10 @@ import { PayrollCalculationService } from './PayrollManagement/payroll-calculati
     GoalService,
     PerformanceReportService,
     PerformanceReviewService,
+<<<<<<< HEAD
     PayrollCalculationService
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
     // Add other services here if needed
   ],
   bootstrap: [AppComponent]

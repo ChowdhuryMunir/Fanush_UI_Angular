@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\Final_Project\\Front_end\\FanushUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|E:\\Final_Project\\Front_end\\FanushUI|E:\\Final_Project\\Front_end\\FanushUI\\src\\app\\payrollmanagement\\payroll-calculation\\payroll-calculation.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|E:\\Final_Project\\Front_end\\FanushUI|e:\\final_project\\front_end\\fanushui\\src\\app\\payrollmanagement\\payroll-calculation\\payroll-calculation.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|E:\\Final_Project\\Front_end\\FanushUI|solutionrelative:src\\app\\payrollmanagement\\payroll-calculation\\payroll-calculation.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|E:\\Final_Project\\Front_end\\FanushUI|solutionrelative:src\\app\\payrollmanagement\\payroll-calculation\\payroll-calculation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|E:\\Final_Project\\Front_end\\FanushUI|e:\\final_project\\front_end\\fanushui\\src\\app\\navigation\\navigation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|E:\\Final_Project\\Front_end\\FanushUI|E:\\Final_Project\\Front_end\\FanushUI\\src\\app\\navigation\\navigation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E33EC925-D309-4F62-B9B8-65E8F33C0CD2}|E:\\Final_Project\\Front_end\\FanushUI|solutionrelative:src\\app\\navigation\\navigation.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -126,8 +126,7 @@
               "RelativeToolTip": "src\\app\\PayrollManagement\\payroll-calculation\\payroll-calculation.component.ts",
               "ViewState": "AQIAAEcAAAAAAAAAAAAmwFMAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-21T09:26:18.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T09:26:18.737Z"
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "RelativeToolTip": "src\\app\\PayrollManagement\\payroll-calculation\\payroll-calculation.model.ts",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-08-21T09:19:15.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T09:19:15.519Z"
             },
             {
               "$type": "Document",
@@ -150,7 +148,7 @@
               "RelativeDocumentMoniker": "src\\app\\PayrollManagement\\payroll-calculation\\payroll-calculation.service.ts",
               "ToolTip": "E:\\Final_Project\\Front_end\\FanushUI\\src\\app\\PayrollManagement\\payroll-calculation\\payroll-calculation.service.ts",
               "RelativeToolTip": "src\\app\\PayrollManagement\\payroll-calculation\\payroll-calculation.service.ts",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2024-08-21T09:20:28.607Z",
               "EditorCaption": ""
@@ -164,9 +162,8 @@
               "ToolTip": "E:\\Final_Project\\Front_end\\FanushUI\\src\\app\\PayrollManagement\\payroll-calculation\\payroll-calculation.component.html",
               "RelativeToolTip": "src\\app\\PayrollManagement\\payroll-calculation\\payroll-calculation.component.html",
               "ViewState": "AQIAAEAAAAAAAAAAAAAQwF4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-21T09:26:48.851Z",
-              "EditorCaption": ""
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANTSURBVEhLvVVLT1NREP56e9tSSkFDoDQGMMENFjawwAUgAoqwNCkY2OBCFuz0D4ALVybu3Rg2hoS6MymKxRDChhDrgmeKkEhB2gLSF4\u002B\u002BnTm9EMECkqpfMrnnzJkz350558yokAHBYPCmLMsjNLSkNZfCQiKR6DQajfM8OZdgdnbWQqJoz4ZOp0NZWRnKy8tRXFy8RSqbSqWy6fX6CTltkhns3GazobCwEBpZo2hPIhAMIJlMora2FnV1dUxWlJeX169Wq1P0o75zCRjsvLf3EcwlZkVzEqPvRzE29gFOpxPhcBh\u002Bvx\u002BNjY0oKCjopCw0SYrdmeA/Z\u002BelpaUZhRyJCEKhEFZXVzEzM4Pp6WlsbGwU0XbLhQSXwe7uLpaWljA5OSnIGH\u002BVgBGJRLC8vAyfzyfmWRNUWSzo6np4LG332qDRaBCNRsV61gQWSxW6OruO5X57O/Lz85XVf5Ci0/j/BPQ4iuiRVKRSKZ2iygq/EZBzK31ekpQKRZY4JuA/39vb66caYiW5QZIxAklSgdaU2cUQBEpabtHwCUkT6xj8SkvMZmi1GuGUnUuSBJUgUYwugCA4Ky319fXo63sMU4kJskYNtawWBEfyJyQSpWWQ00JR3LDb7TquoPvxFD5vR/FuS8Zrby5eLBzgzco\u002BnDsx7CdSmJ\u002Bbg33UTpGHLkyXRAYDgUCgiZ\u002B3w\u002BGAy\u002BVCKJaEY\u002BMArxZDeP7FL4THH0kXpDXXsgufxsexsvqVilwQ8XgcHq8H7nU3vB4PYrG44h4Q5Xpqako4L6PqyI0jGE0TLPrTz53BY50aeHA9V9iwDA8Po6WlFTU1NRgaGsLm5nfhfGdnW9mlnAFFAJ/XKzpTDgllAT8iSZGqI/CYdbzGNrqcHFHQgtRwDIZcajg1aGhoQHPzHVitVlRXV4t9IgK\u002BLcUmk6iEhyQ5lNarOgm5suqYhMesU9NamGwih4fcHsVeqj2Rjo6OdUp3RBj/AhEB35aenh643W6sra3BqJXQek2PyitaYcTg8V3S5dMa26yRbXd3t9hLWKeb\u002BJSb/WlRKbfoNh80nwXntqKyinIeE/ItnD6w8jyZSDRCVhbnBAk7pwgmqKy8pQY/QleXG/4JiDumkAwIzSVBzp8ZDIZBZXoKwE9dXHWgT3KakgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-21T09:26:48.851Z"
             },
             {
               "$type": "Document",
@@ -177,9 +174,8 @@
               "ToolTip": "E:\\Final_Project\\Front_end\\FanushUI\\src\\app\\navigation\\navigation.component.html",
               "RelativeToolTip": "src\\app\\navigation\\navigation.component.html",
               "ViewState": "AQIAAD8AAAAAAAAAAAAAAFMAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-21T05:29:50.608Z",
-              "EditorCaption": ""
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANTSURBVEhLvVVLT1NREP56e9tSSkFDoDQGMMENFjawwAUgAoqwNCkY2OBCFuz0D4ALVybu3Rg2hoS6MymKxRDChhDrgmeKkEhB2gLSF4\u002B\u002BnTm9EMECkqpfMrnnzJkz350558yokAHBYPCmLMsjNLSkNZfCQiKR6DQajfM8OZdgdnbWQqJoz4ZOp0NZWRnKy8tRXFy8RSqbSqWy6fX6CTltkhns3GazobCwEBpZo2hPIhAMIJlMora2FnV1dUxWlJeX169Wq1P0o75zCRjsvLf3EcwlZkVzEqPvRzE29gFOpxPhcBh\u002Bvx\u002BNjY0oKCjopCw0SYrdmeA/Z\u002BelpaUZhRyJCEKhEFZXVzEzM4Pp6WlsbGwU0XbLhQSXwe7uLpaWljA5OSnIGH\u002BVgBGJRLC8vAyfzyfmWRNUWSzo6np4LG332qDRaBCNRsV61gQWSxW6OruO5X57O/Lz85XVf5Ci0/j/BPQ4iuiRVKRSKZ2iygq/EZBzK31ekpQKRZY4JuA/39vb66caYiW5QZIxAklSgdaU2cUQBEpabtHwCUkT6xj8SkvMZmi1GuGUnUuSBJUgUYwugCA4Ky319fXo63sMU4kJskYNtawWBEfyJyQSpWWQ00JR3LDb7TquoPvxFD5vR/FuS8Zrby5eLBzgzco\u002BnDsx7CdSmJ\u002Bbg33UTpGHLkyXRAYDgUCgiZ\u002B3w\u002BGAy\u002BVCKJaEY\u002BMArxZDeP7FL4THH0kXpDXXsgufxsexsvqVilwQ8XgcHq8H7nU3vB4PYrG44h4Q5Xpqako4L6PqyI0jGE0TLPrTz53BY50aeHA9V9iwDA8Po6WlFTU1NRgaGsLm5nfhfGdnW9mlnAFFAJ/XKzpTDgllAT8iSZGqI/CYdbzGNrqcHFHQgtRwDIZcajg1aGhoQHPzHVitVlRXV4t9IgK\u002BLcUmk6iEhyQ5lNarOgm5suqYhMesU9NamGwih4fcHsVeqj2Rjo6OdUp3RBj/AhEB35aenh643W6sra3BqJXQek2PyitaYcTg8V3S5dMa26yRbXd3t9hLWKeb\u002BJSb/WlRKbfoNh80nwXntqKyinIeE/ItnD6w8jyZSDRCVhbnBAk7pwgmqKy8pQY/QleXG/4JiDumkAwIzSVBzp8ZDIZBZXoKwE9dXHWgT3KakgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-21T05:29:50.608Z"
             },
             {
               "$type": "Document",

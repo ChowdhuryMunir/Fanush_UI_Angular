@@ -1,10 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { ApplicantService } from './applicant.service';
 import { Applicant } from './applicant.model';
 import { Education } from './Education.model';
 import { WorkExperience } from './WorkExperience.model';
+=======
+import { Router } from '@angular/router';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { ApplicantService } from './applicant.service';
+import { Applicant } from './applicant.model';
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
 
 @Component({
   selector: 'app-applicant',
@@ -21,32 +29,52 @@ export class ApplicantComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+<<<<<<< HEAD
+=======
+    private router: Router,
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
     private applicantService: ApplicantService
   ) { }
 
   ngOnInit() {
     this.applicantForm = this.formBuilder.group({
       applicantName: ['', [Validators.required]],
+<<<<<<< HEAD
       email: ['', [Validators.required, Validators.email]],
       resumeUrl: [''],
       status: ['Pending'],
       appliedDate: [new Date()],
       phoneNumber: [''],
       linkedinProfileUrl: [''],
+=======
+      email: ['', [Validators.email]],
+      phoneNumber: [''],
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
       address: [''],
       city: [''],
       zipCode: [''],
       country: [''],
+<<<<<<< HEAD
+=======
+      linkedinProfileUrl: [''],
+      resumeUrl: [''],
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
       expectedSalary: [''],
       languages: [''],
       skills: [''],
       references: [''],
+<<<<<<< HEAD
       educations: this.formBuilder.array([]),
       workExperiences: this.formBuilder.array([])
+=======
+      status: ['Pending'],
+      appliedDate: [new Date()]
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
     });
     this.loadAllApplicants();
   }
 
+<<<<<<< HEAD
   get educations(): FormArray {
     return this.applicantForm.get('educations') as FormArray;
   }
@@ -55,6 +83,8 @@ export class ApplicantComponent implements OnInit {
     return this.applicantForm.get('workExperiences') as FormArray;
   }
 
+=======
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   loadAllApplicants() {
     this.allApplicants = this.applicantService.getAllApplicants();
   }
@@ -74,6 +104,7 @@ export class ApplicantComponent implements OnInit {
       this.applicantIdUpdate = applicant.applicantId;
       this.applicantForm.patchValue(applicant);
       this.isAdding = true;
+<<<<<<< HEAD
       // Handle nested form arrays for educations and work experiences
       this.setEducations(applicant.educations || []);
       this.setWorkExperiences(applicant.workExperiences || []);
@@ -92,6 +123,11 @@ export class ApplicantComponent implements OnInit {
     this.applicantForm.setControl('workExperiences', workExperienceFormArray);
   }
 
+=======
+    });
+  }
+
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   createOrUpdateApplicant(applicant: Applicant) {
     if (this.applicantIdUpdate == null) {
       this.applicantService.createApplicant(applicant).subscribe(() => {
@@ -113,9 +149,15 @@ export class ApplicantComponent implements OnInit {
     }
   }
 
+<<<<<<< HEAD
   deleteApplicant(applicantId: number) {
     if (confirm("Are you sure you want to delete this applicant?")) {
       this.applicantService.deleteApplicantById(applicantId).subscribe(() => {
+=======
+  deleteApplicant(id: number) {
+    if (confirm("Are you sure you want to delete this applicant?")) {
+      this.applicantService.deleteApplicantById(id).subscribe(() => {
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
         this.dataSaved = true;
         this.message = "Record Deleted Successfully.";
         this.loadAllApplicants();
@@ -138,6 +180,7 @@ export class ApplicantComponent implements OnInit {
 
   cancelAdding() {
     this.isAdding = false;
+<<<<<<< HEAD
     this.applicantForm.reset();
   }
 
@@ -168,5 +211,8 @@ export class ApplicantComponent implements OnInit {
 
   removeWorkExperience(index: number) {
     this.workExperiences.removeAt(index);
+=======
+    this.resetForm();
+>>>>>>> fe3d6e3420c20b229f7c243463d94aa2ba0793ba
   }
 }
